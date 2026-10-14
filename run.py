@@ -1,149 +1,77 @@
-"""项目启动入口：自动确保运行在 conda 的 item_manager 环境中。"""
+"""项目启动入口
+
+直接使用当前 Python 解释器启动服务，不再依赖 conda 环境。
+
+推荐用项目虚拟环境运行（PowerShell 进入项目目录后会自动激活 .venv）：
+
+    python run.py
+
+也可以显式指定解释器：
+
+    .venv\\Scripts\\python.exe run.py
+
+可用环境变量：HOST、PORT。
+"""
 
 from __future__ import annotations
 
 import os
-import shutil
-import subprocess
 import sys
 from pathlib import Path
 
-ENV_NAME = "item_manager"
-RELAUNCH_FLAG = "ITEM_MANAGE_RELAUNCHED"
+PROJECT_ROOT = Path(__file__).resolve().parent
+VENV_PYTHON = PROJECT_ROOT / ".venv" / "Scripts" / "python.exe"
+
+HOST_DEFAULT = "0.0.0.0"
+PORT_DEFAULT = 8000
 
 
-def _is_target_env() -> bool:
-    """判断当前 Python 是否运行在 item_manager conda 环境中。"""
+def _bootstrap_path() -> None:
+    """确保项目根目录可导入（uvicorn reload 的子进程同样需要）。"""
 
-    default_env = (os.environ.get("CONDA_DEFAULT_ENV") or "").strip()
-    prefix = (os.environ.get("CONDA_PREFIX") or "").strip()
-
-    if default_env.lower() == ENV_NAME.lower():
-        return True
-
-    if prefix and Path(prefix).name.lower() == ENV_NAME.lower():
-        return True
-
-    if Path(sys.prefix).name.lower() == ENV_NAME.lower():
-        return True
-
-    return False
+    root = str(PROJECT_ROOT)
+    if root not in sys.path:
+        sys.path.insert(0, root)
 
 
-def _find_conda() -> str | None:
-    """查找 conda 可执行文件。"""
+def _print_runtime_info() -> None:
+    print(f"当前 Python：{sys.executable}")
 
-    for command in ("conda.exe", "conda.bat", "conda"):
-        found = shutil.which(command)
-        if found:
-            return found
-
-    candidates: list[Path] = []
-
-    conda_exe = os.environ.get("CONDA_EXE")
-    if conda_exe:
-        candidates.append(Path(conda_exe))
-
-    python_exe = Path(sys.executable)
-    candidates.extend(
-        [
-            python_exe.parent / "Scripts" / "conda.exe",
-            python_exe.parent / "Scripts" / "conda.bat",
-            python_exe.parent / "condabin" / "conda.bat",
-            python_exe.parent / "condabin" / "conda.exe",
-        ]
-    )
-
-    home = Path.home()
-    candidates.extend(
-        [
-            home / "anaconda3" / "Scripts" / "conda.exe",
-            home / "miniconda3" / "Scripts" / "conda.exe",
-            home / "anaconda3" / "condabin" / "conda.bat",
-            home / "miniconda3" / "condabin" / "conda.bat",
-            Path("C:/ProgramData/Anaconda3/Scripts/conda.exe"),
-            Path("C:/ProgramData/miniconda3/Scripts/conda.exe"),
-            Path("D:/software/anaconda/anaconda3/Scripts/conda.exe"),
-            Path("D:/software/anaconda/anaconda3/condabin/conda.bat"),
-        ]
-    )
-
-    for candidate in candidates:
-        if candidate.exists():
-            return str(candidate)
-
-    return None
+    if VENV_PYTHON.exists() and Path(sys.executable).resolve() != VENV_PYTHON.resolve():
+        print("提示：当前解释器不是项目虚拟环境，若缺少依赖请改用：")
+        print(f"      {VENV_PYTHON} run.py")
 
 
-def _relaunch_in_conda(conda_exe: str) -> int:
-    """在 conda 的 item_manager 环境中重新运行当前脚本。"""
+def _exit_missing_dependency(exc: ModuleNotFoundError) -> None:
+    print(f"缺少依赖：{exc.name}")
+    print("请先安装依赖：")
 
-    script_path = Path(__file__).resolve()
-    project_root = script_path.parent
-
-    env = os.environ.copy()
-    env[RELAUNCH_FLAG] = "1"
-
-    if Path(conda_exe).suffix.lower() in {".bat", ".cmd"}:
-        command = [
-            "cmd.exe",
-            "/c",
-            conda_exe,
-            "run",
-            "--no-capture-output",
-            "-n",
-            ENV_NAME,
-            "python",
-            str(script_path),
-        ]
+    if VENV_PYTHON.exists():
+        print(f"      {VENV_PYTHON} -m pip install -r requirements.txt")
+        print(f"      {VENV_PYTHON} run.py")
     else:
-        command = [
-            conda_exe,
-            "run",
-            "--no-capture-output",
-            "-n",
-            ENV_NAME,
-            "python",
-            str(script_path),
-        ]
+        print("      python -m pip install -r requirements.txt")
 
-    print(f"当前未在 conda 环境 {ENV_NAME} 中运行。")
-    print(f"正在重新启动：{' '.join(command)}")
-
-    try:
-        return subprocess.call(command, cwd=str(project_root), env=env)
-    except OSError as exc:
-        print(f"进入 conda 环境失败：{exc}")
-        return 1
+    sys.exit(1)
 
 
 def main() -> None:
-    project_root = Path(__file__).resolve().parent
-    os.chdir(project_root)
+    os.chdir(PROJECT_ROOT)
+    _bootstrap_path()
 
-    if not _is_target_env() and not os.environ.get(RELAUNCH_FLAG):
-        conda_exe = _find_conda()
+    try:
+        import uvicorn
 
-        if not conda_exe:
-            print("未找到 conda 命令，无法自动进入 item_manager 环境。")
-            print("请先手动执行：conda activate item_manager")
-            sys.exit(1)
+        from app.core.config import settings
+    except ModuleNotFoundError as exc:
+        _exit_missing_dependency(exc)
+        return
 
-        sys.exit(_relaunch_in_conda(conda_exe))
-
-    import uvicorn
-
-    from app.core.config import settings
-
-    host = os.getenv("HOST", "0.0.0.0")
-    port = int(os.getenv("PORT", "8000"))
+    host = os.getenv("HOST", HOST_DEFAULT)
+    port = int(os.getenv("PORT", str(PORT_DEFAULT)))
     reload = settings.DEBUG
 
-    print(f"当前 Python：{sys.executable}")
-    print(
-        "当前 Conda 环境："
-        f"{os.environ.get('CONDA_DEFAULT_ENV') or Path(sys.prefix).name}"
-    )
+    _print_runtime_info()
     print(f"启动 {settings.APP_NAME}...")
     print(f"地址：http://127.0.0.1:{port}")
     print(f"文档：http://127.0.0.1:{port}/docs")
