@@ -22,6 +22,11 @@ from app.models.models import (
     Unit,
     User,
 )
+from app.models.triggers import (
+    TRIGGER_NAMES,
+    drop_triggers,
+    install_triggers,
+)
 
 __all__ = [
     "Attachment",
@@ -43,7 +48,10 @@ __all__ = [
     "Reminder",
     "ReminderRecipient",
     "Setting",
+    "TRIGGER_NAMES",
     "Tag",
     "Unit",
     "User",
+    "drop_triggers",
+    "install_triggers",
 ]

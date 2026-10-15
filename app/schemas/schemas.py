@@ -163,6 +163,7 @@ class InvitationOut(ORMModel):
 # 单位、分类、标签
 # ---------------------------------------------------------------------------
 class UnitCreate(BaseModel):
+    category_id: str | None = Field(default=None, description="关联分类ID；为空表示通用单位")
     name: str = Field(min_length=1, max_length=50)
     symbol: str | None = Field(default=None, max_length=20)
     decimal_places: int = Field(default=0, ge=0, le=6)
@@ -170,6 +171,7 @@ class UnitCreate(BaseModel):
 
 
 class UnitUpdate(BaseModel):
+    category_id: str | None = Field(default=None, description="关联分类ID；显式传 null 表示改为通用单位")
     name: str | None = Field(default=None, min_length=1, max_length=50)
     symbol: str | None = Field(default=None, max_length=20)
     decimal_places: int | None = Field(default=None, ge=0, le=6)
@@ -179,6 +181,7 @@ class UnitUpdate(BaseModel):
 class UnitOut(ORMModel):
     id: str
     property_id: str | None = None
+    category_id: str | None = None
     name: str
     symbol: str | None = None
     decimal_places: int

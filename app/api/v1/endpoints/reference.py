@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from fastapi import APIRouter, Depends, status
+from fastapi import APIRouter, Depends, Query, status
 from sqlalchemy import and_, or_, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -55,38 +55,126 @@ async def _check_public_name(
         raise ConflictError(f"公共{model.__name__}名称已存在")
 
 
+async def _check_unit_public_name(
+    db: AsyncSession,
+    name: str,
+    category_id: str | None,
+    exclude_id: str | None = None,
+) -> None:
+    """校验公共单位名称，规则与 units 上的触发器保持一致。
+
+    units 表没有 name_public_unique 生成列/唯一索引，重名由数据库触发器
+    trg_units_public_unique_before_insert / _before_update 强制，规则为：
+      * 通用单位（category_id 为空）：名称在公共单位中全局唯一；
+      * 分类单位：不得与通用单位同名，且同一分类内唯一（不同分类允许重名）。
+    这里先做同样的判断，使接口返回 409 而不是让触发器抛出的
+    SQLSTATE 45000 变成 500。
+    """
+    stmt = select(Unit).where(
+        Unit.name == name,
+        Unit.is_public.is_(True),
+        Unit.deleted_at.is_(None),
+    )
+    if exclude_id:
+        stmt = stmt.where(Unit.id != exclude_id)
+
+    if category_id is None:
+        if await db.scalar(stmt):
+            raise ConflictError("通用单位名称必须全局唯一")
+        return
+
+    conflict = await db.scalar(
+        stmt.where(
+            or_(Unit.category_id.is_(None), Unit.category_id == category_id)
+        )
+    )
+    if conflict is not None:
+        if conflict.category_id is None:
+            raise ConflictError("不能与通用单位同名")
+        raise ConflictError("该分类下已存在同名公共单位")
+
+
+async def _resolve_unit_category(
+    db: AsyncSession,
+    property_id: str | None,
+    category_id: str | None,
+) -> str | None:
+    """校验单位关联的分类（units.category_id）。
+
+    建表脚本中 units.category_id 为 NULL 表示通用单位，非 NULL 表示仅限该分类使用，
+    并配有针对 (is_public, category_id, property_id) 的 idx_units_scope 索引。
+    因此允许关联：本房屋自己的分类，或已审核通过的公共分类。
+    """
+    if not category_id:
+        return None
+
+    conditions = [
+        Category.id == category_id,
+        Category.deleted_at.is_(None),
+    ]
+    if property_id:
+        conditions.append(
+            or_(
+                Category.property_id == property_id,
+                and_(Category.is_public.is_(True), Category.review_status == "approved"),
+            )
+        )
+    category = await db.scalar(select(Category).where(*conditions))
+    if not category:
+        raise NotFoundError("分类不存在或不属于该房屋")
+    return category.id
+
+
 @router.get("/properties/{property_id}/units", response_model=list[UnitOut], summary="单位列表")
 async def list_units(
     property_id: str,
+    category_id: str | None = Query(
+        default=None,
+        description="按分类过滤：返回通用单位（category_id 为空）与该分类专用单位",
+    ),
     user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ) -> list[UnitOut]:
     await get_property_access(db, property_id, user)
+    conditions = [
+        Unit.deleted_at.is_(None),
+        or_(
+            and_(Unit.is_public.is_(True), Unit.review_status == "approved"),
+            Unit.property_id == property_id,
+        ),
+    ]
+    if category_id:
+        # 通用单位在任何分类下都可用；指定分类时只保留绑定该分类的单位。
+        # 该条件对应 idx_units_scope(is_public, category_id, property_id)。
+        conditions.append(
+            or_(Unit.category_id.is_(None), Unit.category_id == category_id)
+        )
     rows = await db.scalars(
         select(Unit)
-        .where(
-            Unit.deleted_at.is_(None),
-            or_(
-                and_(Unit.is_public.is_(True), Unit.review_status == "approved"),
-                Unit.property_id == property_id,
-            ),
-        )
+        .where(*conditions)
         .order_by(Unit.is_public.desc(), Unit.name)
     )
     return [UnitOut.model_validate(row) for row in rows.all()]
 
 
 @router.get("/units/public", response_model=list[UnitOut], summary="公共单位")
-async def list_public_units(db: AsyncSession = Depends(get_db)) -> list[UnitOut]:
-    rows = await db.scalars(
-        select(Unit)
-        .where(
-            Unit.is_public.is_(True),
-            Unit.review_status == "approved",
-            Unit.deleted_at.is_(None),
+async def list_public_units(
+    category_id: str | None = Query(
+        default=None,
+        description="按分类过滤：返回通用单位（category_id 为空）与该分类专用单位",
+    ),
+    db: AsyncSession = Depends(get_db),
+) -> list[UnitOut]:
+    conditions = [
+        Unit.is_public.is_(True),
+        Unit.review_status == "approved",
+        Unit.deleted_at.is_(None),
+    ]
+    if category_id:
+        conditions.append(
+            or_(Unit.category_id.is_(None), Unit.category_id == category_id)
         )
-        .order_by(Unit.name)
-    )
+    rows = await db.scalars(select(Unit).where(*conditions).order_by(Unit.name))
     return [UnitOut.model_validate(row) for row in rows.all()]
 
 
@@ -103,10 +191,14 @@ async def create_unit(
     db: AsyncSession = Depends(get_db),
 ) -> UnitOut:
     await require_property_write(db, property_id, user)
+    resolved_category_id = await _resolve_unit_category(
+        db, property_id, payload.category_id
+    )
     if payload.is_public:
-        await _check_public_name(db, Unit, payload.name)
+        await _check_unit_public_name(db, payload.name, resolved_category_id)
     unit = Unit(
         property_id=property_id,
+        category_id=resolved_category_id,
         name=payload.name,
         symbol=payload.symbol,
         decimal_places=payload.decimal_places,
@@ -123,7 +215,11 @@ async def create_unit(
         entity_type="unit",
         entity_id=unit.id,
         property_id=property_id,
-        after_data={"name": unit.name, "is_public": unit.is_public},
+        after_data={
+            "name": unit.name,
+            "is_public": unit.is_public,
+            "category_id": unit.category_id,
+        },
     )
     await db.commit()
     await db.refresh(unit)
@@ -145,8 +241,18 @@ async def update_unit(
     else:
         await require_property_write(db, unit.property_id, user)
     data = payload.model_dump(exclude_unset=True)
-    if data.get("name") and data.get("is_public", unit.is_public):
-        await _check_public_name(db, Unit, data["name"], unit.id)
+    if "category_id" in data:
+        data["category_id"] = await _resolve_unit_category(
+            db, unit.property_id, data["category_id"]
+        )
+    # 用「更新后」的名称/分类/公开状态做校验，与 UPDATE 触发器的判断对象一致
+    if data.get("is_public", unit.is_public):
+        await _check_unit_public_name(
+            db,
+            data.get("name", unit.name),
+            data.get("category_id", unit.category_id),
+            unit.id,
+        )
     for key, value in data.items():
         setattr(unit, key, value)
     if data.get("is_public") is True:
@@ -186,7 +292,7 @@ async def submit_unit_review(
     if not unit.property_id:
         raise PermissionDeniedError("该单位已转为公共数据")
     await require_property_write(db, unit.property_id, user)
-    await _check_public_name(db, Unit, unit.name, unit.id)
+    await _check_unit_public_name(db, unit.name, unit.category_id, unit.id)
     unit.is_public = True
     unit.review_status = "pending"
     unit.review_remark = None
@@ -211,6 +317,9 @@ async def review_unit(
     unit.reviewed_at = datetime.utcnow()
     unit.review_remark = payload.remark
     if payload.approve:
+        # 审核通过会置 is_public=True，需先按触发器规则校验重名，
+        # 否则触发器抛出的 SQLSTATE 45000 会变成 500。
+        await _check_unit_public_name(db, unit.name, unit.category_id, unit.id)
         unit.is_public = True
         unit.published_at = datetime.utcnow()
         unit.property_id = None

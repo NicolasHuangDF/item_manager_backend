@@ -1,0 +1,3732 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="item_manager@localhost">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.54">
+    <root id="1">
+      <DefaultAuthPlugin>mysql_native_password</DefaultAuthPlugin>
+      <DefaultCasing>lower/lower</DefaultCasing>
+      <DefaultEngine>InnoDB</DefaultEngine>
+      <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
+      <Grants>|root||root|localhost|ALTER|G
+|root||root|localhost|ALTER ROUTINE|G
+|root||root|localhost|APPLICATION_PASSWORD_ADMIN|G
+|root||root|localhost|AUDIT_ADMIN|G
+|root||mysql.session|localhost|BACKUP_ADMIN|G
+|root||root|localhost|BACKUP_ADMIN|G
+|root||root|localhost|BINLOG_ADMIN|G
+|root||root|localhost|BINLOG_ENCRYPTION_ADMIN|G
+|root||mysql.session|localhost|CLONE_ADMIN|G
+|root||root|localhost|CLONE_ADMIN|G
+|root||mysql.session|localhost|CONNECTION_ADMIN|G
+|root||root|localhost|CONNECTION_ADMIN|G
+|root||root|localhost|CREATE|G
+|root||root|localhost|CREATE ROLE|G
+|root||root|localhost|CREATE ROUTINE|G
+|root||root|localhost|CREATE TABLESPACE|G
+|root||root|localhost|CREATE TEMPORARY TABLES|G
+|root||root|localhost|CREATE USER|G
+|root||root|localhost|CREATE VIEW|G
+|root||root|localhost|DELETE|G
+|root||root|localhost|DROP|G
+|root||root|localhost|DROP ROLE|G
+|root||root|localhost|ENCRYPTION_KEY_ADMIN|G
+|root||root|localhost|EVENT|G
+|root||root|localhost|EXECUTE|G
+|root||root|localhost|FILE|G
+|root||root|localhost|GROUP_REPLICATION_ADMIN|G
+|root||root|localhost|INDEX|G
+|root||root|localhost|INNODB_REDO_LOG_ARCHIVE|G
+|root||root|localhost|INNODB_REDO_LOG_ENABLE|G
+|root||root|localhost|INSERT|G
+|root||root|localhost|LOCK TABLES|G
+|root||mysql.session|localhost|PERSIST_RO_VARIABLES_ADMIN|G
+|root||root|localhost|PERSIST_RO_VARIABLES_ADMIN|G
+|root||root|localhost|PROCESS|G
+|root||root|localhost|REFERENCES|G
+|root||root|localhost|RELOAD|G
+|root||root|localhost|REPLICATION CLIENT|G
+|root||root|localhost|REPLICATION SLAVE|G
+|root||root|localhost|REPLICATION_APPLIER|G
+|root||root|localhost|REPLICATION_SLAVE_ADMIN|G
+|root||root|localhost|RESOURCE_GROUP_ADMIN|G
+|root||root|localhost|RESOURCE_GROUP_USER|G
+|root||root|localhost|ROLE_ADMIN|G
+|root||mysql.infoschema|localhost|SELECT|G
+|root||root|localhost|SELECT|G
+|root||root|localhost|SERVICE_CONNECTION_ADMIN|G
+|root||mysql.session|localhost|SESSION_VARIABLES_ADMIN|G
+|root||root|localhost|SESSION_VARIABLES_ADMIN|G
+|root||root|localhost|SET_USER_ID|G
+|root||root|localhost|SHOW DATABASES|G
+|root||root|localhost|SHOW VIEW|G
+|root||root|localhost|SHOW_ROUTINE|G
+|root||mysql.session|localhost|SHUTDOWN|G
+|root||root|localhost|SHUTDOWN|G
+|root||mysql.session|localhost|SUPER|G
+|root||root|localhost|SUPER|G
+|root||mysql.session|localhost|SYSTEM_USER|G
+|root||root|localhost|SYSTEM_USER|G
+|root||mysql.session|localhost|SYSTEM_VARIABLES_ADMIN|G
+|root||root|localhost|SYSTEM_VARIABLES_ADMIN|G
+|root||root|localhost|TABLE_ENCRYPTION_ADMIN|G
+|root||root|localhost|TRIGGER|G
+|root||root|localhost|UPDATE|G
+|root||root|localhost|XA_RECOVER_ADMIN|G
+|root||root|localhost|grant option|G
+performance_schema|schema||mysql.session|localhost|SELECT|G
+sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
+      <ServerVersion>8.0.21</ServerVersion>
+    </root>
+    <collation id="2" parent="1" name="armscii8_bin">
+      <Charset>armscii8</Charset>
+    </collation>
+    <collation id="3" parent="1" name="armscii8_general_ci">
+      <Charset>armscii8</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="4" parent="1" name="ascii_bin">
+      <Charset>ascii</Charset>
+    </collation>
+    <collation id="5" parent="1" name="ascii_general_ci">
+      <Charset>ascii</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="6" parent="1" name="big5_bin">
+      <Charset>big5</Charset>
+    </collation>
+    <collation id="7" parent="1" name="big5_chinese_ci">
+      <Charset>big5</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="8" parent="1" name="binary">
+      <Charset>binary</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="9" parent="1" name="cp1250_bin">
+      <Charset>cp1250</Charset>
+    </collation>
+    <collation id="10" parent="1" name="cp1250_croatian_ci">
+      <Charset>cp1250</Charset>
+    </collation>
+    <collation id="11" parent="1" name="cp1250_czech_cs">
+      <Charset>cp1250</Charset>
+    </collation>
+    <collation id="12" parent="1" name="cp1250_general_ci">
+      <Charset>cp1250</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="13" parent="1" name="cp1250_polish_ci">
+      <Charset>cp1250</Charset>
+    </collation>
+    <collation id="14" parent="1" name="cp1251_bin">
+      <Charset>cp1251</Charset>
+    </collation>
+    <collation id="15" parent="1" name="cp1251_bulgarian_ci">
+      <Charset>cp1251</Charset>
+    </collation>
+    <collation id="16" parent="1" name="cp1251_general_ci">
+      <Charset>cp1251</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="17" parent="1" name="cp1251_general_cs">
+      <Charset>cp1251</Charset>
+    </collation>
+    <collation id="18" parent="1" name="cp1251_ukrainian_ci">
+      <Charset>cp1251</Charset>
+    </collation>
+    <collation id="19" parent="1" name="cp1256_bin">
+      <Charset>cp1256</Charset>
+    </collation>
+    <collation id="20" parent="1" name="cp1256_general_ci">
+      <Charset>cp1256</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="21" parent="1" name="cp1257_bin">
+      <Charset>cp1257</Charset>
+    </collation>
+    <collation id="22" parent="1" name="cp1257_general_ci">
+      <Charset>cp1257</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="23" parent="1" name="cp1257_lithuanian_ci">
+      <Charset>cp1257</Charset>
+    </collation>
+    <collation id="24" parent="1" name="cp850_bin">
+      <Charset>cp850</Charset>
+    </collation>
+    <collation id="25" parent="1" name="cp850_general_ci">
+      <Charset>cp850</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="26" parent="1" name="cp852_bin">
+      <Charset>cp852</Charset>
+    </collation>
+    <collation id="27" parent="1" name="cp852_general_ci">
+      <Charset>cp852</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="28" parent="1" name="cp866_bin">
+      <Charset>cp866</Charset>
+    </collation>
+    <collation id="29" parent="1" name="cp866_general_ci">
+      <Charset>cp866</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="30" parent="1" name="cp932_bin">
+      <Charset>cp932</Charset>
+    </collation>
+    <collation id="31" parent="1" name="cp932_japanese_ci">
+      <Charset>cp932</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="32" parent="1" name="dec8_bin">
+      <Charset>dec8</Charset>
+    </collation>
+    <collation id="33" parent="1" name="dec8_swedish_ci">
+      <Charset>dec8</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="34" parent="1" name="eucjpms_bin">
+      <Charset>eucjpms</Charset>
+    </collation>
+    <collation id="35" parent="1" name="eucjpms_japanese_ci">
+      <Charset>eucjpms</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="36" parent="1" name="euckr_bin">
+      <Charset>euckr</Charset>
+    </collation>
+    <collation id="37" parent="1" name="euckr_korean_ci">
+      <Charset>euckr</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="38" parent="1" name="gb18030_bin">
+      <Charset>gb18030</Charset>
+    </collation>
+    <collation id="39" parent="1" name="gb18030_chinese_ci">
+      <Charset>gb18030</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="40" parent="1" name="gb18030_unicode_520_ci">
+      <Charset>gb18030</Charset>
+    </collation>
+    <collation id="41" parent="1" name="gb2312_bin">
+      <Charset>gb2312</Charset>
+    </collation>
+    <collation id="42" parent="1" name="gb2312_chinese_ci">
+      <Charset>gb2312</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="43" parent="1" name="gbk_bin">
+      <Charset>gbk</Charset>
+    </collation>
+    <collation id="44" parent="1" name="gbk_chinese_ci">
+      <Charset>gbk</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="45" parent="1" name="geostd8_bin">
+      <Charset>geostd8</Charset>
+    </collation>
+    <collation id="46" parent="1" name="geostd8_general_ci">
+      <Charset>geostd8</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="47" parent="1" name="greek_bin">
+      <Charset>greek</Charset>
+    </collation>
+    <collation id="48" parent="1" name="greek_general_ci">
+      <Charset>greek</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="49" parent="1" name="hebrew_bin">
+      <Charset>hebrew</Charset>
+    </collation>
+    <collation id="50" parent="1" name="hebrew_general_ci">
+      <Charset>hebrew</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="51" parent="1" name="hp8_bin">
+      <Charset>hp8</Charset>
+    </collation>
+    <collation id="52" parent="1" name="hp8_english_ci">
+      <Charset>hp8</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="53" parent="1" name="keybcs2_bin">
+      <Charset>keybcs2</Charset>
+    </collation>
+    <collation id="54" parent="1" name="keybcs2_general_ci">
+      <Charset>keybcs2</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="55" parent="1" name="koi8r_bin">
+      <Charset>koi8r</Charset>
+    </collation>
+    <collation id="56" parent="1" name="koi8r_general_ci">
+      <Charset>koi8r</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="57" parent="1" name="koi8u_bin">
+      <Charset>koi8u</Charset>
+    </collation>
+    <collation id="58" parent="1" name="koi8u_general_ci">
+      <Charset>koi8u</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="59" parent="1" name="latin1_bin">
+      <Charset>latin1</Charset>
+    </collation>
+    <collation id="60" parent="1" name="latin1_danish_ci">
+      <Charset>latin1</Charset>
+    </collation>
+    <collation id="61" parent="1" name="latin1_general_ci">
+      <Charset>latin1</Charset>
+    </collation>
+    <collation id="62" parent="1" name="latin1_general_cs">
+      <Charset>latin1</Charset>
+    </collation>
+    <collation id="63" parent="1" name="latin1_german1_ci">
+      <Charset>latin1</Charset>
+    </collation>
+    <collation id="64" parent="1" name="latin1_german2_ci">
+      <Charset>latin1</Charset>
+    </collation>
+    <collation id="65" parent="1" name="latin1_spanish_ci">
+      <Charset>latin1</Charset>
+    </collation>
+    <collation id="66" parent="1" name="latin1_swedish_ci">
+      <Charset>latin1</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="67" parent="1" name="latin2_bin">
+      <Charset>latin2</Charset>
+    </collation>
+    <collation id="68" parent="1" name="latin2_croatian_ci">
+      <Charset>latin2</Charset>
+    </collation>
+    <collation id="69" parent="1" name="latin2_czech_cs">
+      <Charset>latin2</Charset>
+    </collation>
+    <collation id="70" parent="1" name="latin2_general_ci">
+      <Charset>latin2</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="71" parent="1" name="latin2_hungarian_ci">
+      <Charset>latin2</Charset>
+    </collation>
+    <collation id="72" parent="1" name="latin5_bin">
+      <Charset>latin5</Charset>
+    </collation>
+    <collation id="73" parent="1" name="latin5_turkish_ci">
+      <Charset>latin5</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="74" parent="1" name="latin7_bin">
+      <Charset>latin7</Charset>
+    </collation>
+    <collation id="75" parent="1" name="latin7_estonian_cs">
+      <Charset>latin7</Charset>
+    </collation>
+    <collation id="76" parent="1" name="latin7_general_ci">
+      <Charset>latin7</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="77" parent="1" name="latin7_general_cs">
+      <Charset>latin7</Charset>
+    </collation>
+    <collation id="78" parent="1" name="macce_bin">
+      <Charset>macce</Charset>
+    </collation>
+    <collation id="79" parent="1" name="macce_general_ci">
+      <Charset>macce</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="80" parent="1" name="macroman_bin">
+      <Charset>macroman</Charset>
+    </collation>
+    <collation id="81" parent="1" name="macroman_general_ci">
+      <Charset>macroman</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="82" parent="1" name="sjis_bin">
+      <Charset>sjis</Charset>
+    </collation>
+    <collation id="83" parent="1" name="sjis_japanese_ci">
+      <Charset>sjis</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="84" parent="1" name="swe7_bin">
+      <Charset>swe7</Charset>
+    </collation>
+    <collation id="85" parent="1" name="swe7_swedish_ci">
+      <Charset>swe7</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="86" parent="1" name="tis620_bin">
+      <Charset>tis620</Charset>
+    </collation>
+    <collation id="87" parent="1" name="tis620_thai_ci">
+      <Charset>tis620</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="88" parent="1" name="ucs2_bin">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="89" parent="1" name="ucs2_croatian_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="90" parent="1" name="ucs2_czech_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="91" parent="1" name="ucs2_danish_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="92" parent="1" name="ucs2_esperanto_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="93" parent="1" name="ucs2_estonian_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="94" parent="1" name="ucs2_general_ci">
+      <Charset>ucs2</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="95" parent="1" name="ucs2_general_mysql500_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="96" parent="1" name="ucs2_german2_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="97" parent="1" name="ucs2_hungarian_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="98" parent="1" name="ucs2_icelandic_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="99" parent="1" name="ucs2_latvian_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="100" parent="1" name="ucs2_lithuanian_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="101" parent="1" name="ucs2_persian_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="102" parent="1" name="ucs2_polish_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="103" parent="1" name="ucs2_roman_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="104" parent="1" name="ucs2_romanian_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="105" parent="1" name="ucs2_sinhala_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="106" parent="1" name="ucs2_slovak_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="107" parent="1" name="ucs2_slovenian_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="108" parent="1" name="ucs2_spanish2_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="109" parent="1" name="ucs2_spanish_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="110" parent="1" name="ucs2_swedish_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="111" parent="1" name="ucs2_turkish_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="112" parent="1" name="ucs2_unicode_520_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="113" parent="1" name="ucs2_unicode_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="114" parent="1" name="ucs2_vietnamese_ci">
+      <Charset>ucs2</Charset>
+    </collation>
+    <collation id="115" parent="1" name="ujis_bin">
+      <Charset>ujis</Charset>
+    </collation>
+    <collation id="116" parent="1" name="ujis_japanese_ci">
+      <Charset>ujis</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="117" parent="1" name="utf16_bin">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="118" parent="1" name="utf16_croatian_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="119" parent="1" name="utf16_czech_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="120" parent="1" name="utf16_danish_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="121" parent="1" name="utf16_esperanto_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="122" parent="1" name="utf16_estonian_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="123" parent="1" name="utf16_general_ci">
+      <Charset>utf16</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="124" parent="1" name="utf16_german2_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="125" parent="1" name="utf16_hungarian_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="126" parent="1" name="utf16_icelandic_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="127" parent="1" name="utf16_latvian_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="128" parent="1" name="utf16_lithuanian_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="129" parent="1" name="utf16_persian_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="130" parent="1" name="utf16_polish_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="131" parent="1" name="utf16_roman_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="132" parent="1" name="utf16_romanian_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="133" parent="1" name="utf16_sinhala_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="134" parent="1" name="utf16_slovak_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="135" parent="1" name="utf16_slovenian_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="136" parent="1" name="utf16_spanish2_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="137" parent="1" name="utf16_spanish_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="138" parent="1" name="utf16_swedish_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="139" parent="1" name="utf16_turkish_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="140" parent="1" name="utf16_unicode_520_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="141" parent="1" name="utf16_unicode_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="142" parent="1" name="utf16_vietnamese_ci">
+      <Charset>utf16</Charset>
+    </collation>
+    <collation id="143" parent="1" name="utf16le_bin">
+      <Charset>utf16le</Charset>
+    </collation>
+    <collation id="144" parent="1" name="utf16le_general_ci">
+      <Charset>utf16le</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="145" parent="1" name="utf32_bin">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="146" parent="1" name="utf32_croatian_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="147" parent="1" name="utf32_czech_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="148" parent="1" name="utf32_danish_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="149" parent="1" name="utf32_esperanto_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="150" parent="1" name="utf32_estonian_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="151" parent="1" name="utf32_general_ci">
+      <Charset>utf32</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="152" parent="1" name="utf32_german2_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="153" parent="1" name="utf32_hungarian_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="154" parent="1" name="utf32_icelandic_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="155" parent="1" name="utf32_latvian_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="156" parent="1" name="utf32_lithuanian_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="157" parent="1" name="utf32_persian_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="158" parent="1" name="utf32_polish_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="159" parent="1" name="utf32_roman_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="160" parent="1" name="utf32_romanian_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="161" parent="1" name="utf32_sinhala_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="162" parent="1" name="utf32_slovak_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="163" parent="1" name="utf32_slovenian_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="164" parent="1" name="utf32_spanish2_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="165" parent="1" name="utf32_spanish_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="166" parent="1" name="utf32_swedish_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="167" parent="1" name="utf32_turkish_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="168" parent="1" name="utf32_unicode_520_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="169" parent="1" name="utf32_unicode_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="170" parent="1" name="utf32_vietnamese_ci">
+      <Charset>utf32</Charset>
+    </collation>
+    <collation id="171" parent="1" name="utf8_bin">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="172" parent="1" name="utf8_croatian_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="173" parent="1" name="utf8_czech_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="174" parent="1" name="utf8_danish_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="175" parent="1" name="utf8_esperanto_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="176" parent="1" name="utf8_estonian_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="177" parent="1" name="utf8_general_ci">
+      <Charset>utf8</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="178" parent="1" name="utf8_general_mysql500_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="179" parent="1" name="utf8_german2_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="180" parent="1" name="utf8_hungarian_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="181" parent="1" name="utf8_icelandic_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="182" parent="1" name="utf8_latvian_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="183" parent="1" name="utf8_lithuanian_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="184" parent="1" name="utf8_persian_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="185" parent="1" name="utf8_polish_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="186" parent="1" name="utf8_roman_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="187" parent="1" name="utf8_romanian_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="188" parent="1" name="utf8_sinhala_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="189" parent="1" name="utf8_slovak_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="190" parent="1" name="utf8_slovenian_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="191" parent="1" name="utf8_spanish2_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="192" parent="1" name="utf8_spanish_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="193" parent="1" name="utf8_swedish_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="194" parent="1" name="utf8_tolower_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="195" parent="1" name="utf8_turkish_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="196" parent="1" name="utf8_unicode_520_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="197" parent="1" name="utf8_unicode_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="198" parent="1" name="utf8_vietnamese_ci">
+      <Charset>utf8</Charset>
+    </collation>
+    <collation id="199" parent="1" name="utf8mb4_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+      <DefaultForCharset>1</DefaultForCharset>
+    </collation>
+    <collation id="200" parent="1" name="utf8mb4_0900_as_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="201" parent="1" name="utf8mb4_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="202" parent="1" name="utf8mb4_0900_bin">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="203" parent="1" name="utf8mb4_bin">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="204" parent="1" name="utf8mb4_croatian_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="205" parent="1" name="utf8mb4_cs_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="206" parent="1" name="utf8mb4_cs_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="207" parent="1" name="utf8mb4_czech_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="208" parent="1" name="utf8mb4_da_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="209" parent="1" name="utf8mb4_da_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="210" parent="1" name="utf8mb4_danish_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="211" parent="1" name="utf8mb4_de_pb_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="212" parent="1" name="utf8mb4_de_pb_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="213" parent="1" name="utf8mb4_eo_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="214" parent="1" name="utf8mb4_eo_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="215" parent="1" name="utf8mb4_es_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="216" parent="1" name="utf8mb4_es_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="217" parent="1" name="utf8mb4_es_trad_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="218" parent="1" name="utf8mb4_es_trad_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="219" parent="1" name="utf8mb4_esperanto_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="220" parent="1" name="utf8mb4_estonian_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="221" parent="1" name="utf8mb4_et_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="222" parent="1" name="utf8mb4_et_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="223" parent="1" name="utf8mb4_general_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="224" parent="1" name="utf8mb4_german2_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="225" parent="1" name="utf8mb4_hr_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="226" parent="1" name="utf8mb4_hr_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="227" parent="1" name="utf8mb4_hu_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="228" parent="1" name="utf8mb4_hu_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="229" parent="1" name="utf8mb4_hungarian_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="230" parent="1" name="utf8mb4_icelandic_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="231" parent="1" name="utf8mb4_is_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="232" parent="1" name="utf8mb4_is_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="233" parent="1" name="utf8mb4_ja_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="234" parent="1" name="utf8mb4_ja_0900_as_cs_ks">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="235" parent="1" name="utf8mb4_la_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="236" parent="1" name="utf8mb4_la_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="237" parent="1" name="utf8mb4_latvian_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="238" parent="1" name="utf8mb4_lithuanian_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="239" parent="1" name="utf8mb4_lt_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="240" parent="1" name="utf8mb4_lt_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="241" parent="1" name="utf8mb4_lv_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="242" parent="1" name="utf8mb4_lv_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="243" parent="1" name="utf8mb4_persian_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="244" parent="1" name="utf8mb4_pl_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="245" parent="1" name="utf8mb4_pl_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="246" parent="1" name="utf8mb4_polish_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="247" parent="1" name="utf8mb4_ro_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="248" parent="1" name="utf8mb4_ro_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="249" parent="1" name="utf8mb4_roman_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="250" parent="1" name="utf8mb4_romanian_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="251" parent="1" name="utf8mb4_ru_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="252" parent="1" name="utf8mb4_ru_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="253" parent="1" name="utf8mb4_sinhala_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="254" parent="1" name="utf8mb4_sk_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="255" parent="1" name="utf8mb4_sk_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="256" parent="1" name="utf8mb4_sl_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="257" parent="1" name="utf8mb4_sl_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="258" parent="1" name="utf8mb4_slovak_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="259" parent="1" name="utf8mb4_slovenian_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="260" parent="1" name="utf8mb4_spanish2_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="261" parent="1" name="utf8mb4_spanish_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="262" parent="1" name="utf8mb4_sv_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="263" parent="1" name="utf8mb4_sv_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="264" parent="1" name="utf8mb4_swedish_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="265" parent="1" name="utf8mb4_tr_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="266" parent="1" name="utf8mb4_tr_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="267" parent="1" name="utf8mb4_turkish_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="268" parent="1" name="utf8mb4_unicode_520_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="269" parent="1" name="utf8mb4_unicode_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="270" parent="1" name="utf8mb4_vi_0900_ai_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="271" parent="1" name="utf8mb4_vi_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="272" parent="1" name="utf8mb4_vietnamese_ci">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <collation id="273" parent="1" name="utf8mb4_zh_0900_as_cs">
+      <Charset>utf8mb4</Charset>
+    </collation>
+    <schema id="274" parent="1" name="bridge">
+      <CollationName>utf8_general_ci</CollationName>
+    </schema>
+    <schema id="275" parent="1" name="home_storage">
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </schema>
+    <schema id="276" parent="1" name="information_schema">
+      <CollationName>utf8_general_ci</CollationName>
+    </schema>
+    <schema id="277" parent="1" name="item_manager">
+      <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
+      <Current>1</Current>
+      <LastIntrospectionLevel>3</LastIntrospectionLevel>
+      <LastIntrospectionLocalTimestamp>2026-10-15.03:11:10</LastIntrospectionLocalTimestamp>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </schema>
+    <schema id="278" parent="1" name="mysql">
+      <CollationName>utf8_general_ci</CollationName>
+    </schema>
+    <schema id="279" parent="1" name="nanjing_bridge">
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </schema>
+    <schema id="280" parent="1" name="performance_schema">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="281" parent="1" name="recipe">
+      <CollationName>utf8_general_ci</CollationName>
+    </schema>
+    <schema id="282" parent="1" name="regular">
+      <CollationName>utf8_general_ci</CollationName>
+    </schema>
+    <schema id="283" parent="1" name="sampledb">
+      <CollationName>utf8_general_ci</CollationName>
+    </schema>
+    <schema id="284" parent="1" name="shop">
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </schema>
+    <schema id="285" parent="1" name="sys">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </schema>
+    <schema id="286" parent="1" name="task1">
+      <CollationName>utf8_general_ci</CollationName>
+    </schema>
+    <user id="287" parent="1" name="mysql.infoschema">
+      <CanLogin>0</CanLogin>
+      <Host>localhost</Host>
+      <Plugin>caching_sha2_password</Plugin>
+    </user>
+    <user id="288" parent="1" name="mysql.session">
+      <CanLogin>0</CanLogin>
+      <Host>localhost</Host>
+      <Plugin>caching_sha2_password</Plugin>
+    </user>
+    <user id="289" parent="1" name="mysql.sys">
+      <CanLogin>0</CanLogin>
+      <Host>localhost</Host>
+      <Plugin>caching_sha2_password</Plugin>
+    </user>
+    <user id="290" parent="1" name="root">
+      <Host>localhost</Host>
+    </user>
+    <table id="291" parent="277" name="attachments">
+      <Comment>附件表</Comment>
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <Options>row_format
+DYNAMIC</Options>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="292" parent="277" name="audit_logs">
+      <Comment>操作审计表</Comment>
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <Options>row_format
+DYNAMIC</Options>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="293" parent="277" name="auth_tokens">
+      <Comment>认证令牌/会话表</Comment>
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <Options>row_format
+DYNAMIC</Options>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="294" parent="277" name="categories">
+      <Comment>物品分类表</Comment>
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <Options>row_format
+DYNAMIC</Options>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="295" parent="277" name="containers">
+      <Comment>容器表：房间、橱柜、抽屉、格子、盒子、冰箱、冰柜、电器等</Comment>
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <Options>row_format
+DYNAMIC</Options>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="296" parent="277" name="inventory_transactions">
+      <Comment>库存流水表</Comment>
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <Options>row_format
+DYNAMIC</Options>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="297" parent="277" name="item_batches">
+      <Comment>物品批次库存表</Comment>
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <Options>row_format
+DYNAMIC</Options>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="298" parent="277" name="item_tags">
+      <Comment>物品标签关联表</Comment>
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <Options>row_format
+DYNAMIC</Options>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="299" parent="277" name="items">
+      <Comment>物品主数据表</Comment>
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <Options>row_format
+DYNAMIC</Options>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="300" parent="277" name="notification_channels">
+      <Comment>通知渠道表</Comment>
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <Options>row_format
+DYNAMIC</Options>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="301" parent="277" name="notification_preferences">
+      <Comment>通知偏好表</Comment>
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <Options>row_format
+DYNAMIC</Options>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="302" parent="277" name="notifications">
+      <Comment>通知记录表</Comment>
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <Options>row_format
+DYNAMIC</Options>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="303" parent="277" name="properties">
+      <Comment>房屋表</Comment>
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <Options>row_format
+DYNAMIC</Options>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="304" parent="277" name="property_invitations">
+      <Comment>房屋邀请表</Comment>
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <Options>row_format
+DYNAMIC</Options>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="305" parent="277" name="property_members">
+      <Comment>房屋成员关系表</Comment>
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <Options>row_format
+DYNAMIC</Options>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="306" parent="277" name="reminder_recipients">
+      <Comment>提醒接收人表</Comment>
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <Options>row_format
+DYNAMIC</Options>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="307" parent="277" name="reminders">
+      <Comment>提醒表</Comment>
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <Options>row_format
+DYNAMIC</Options>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="308" parent="277" name="settings">
+      <Comment>统一配置表</Comment>
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <Options>row_format
+DYNAMIC</Options>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="309" parent="277" name="tags">
+      <Comment>标签表</Comment>
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <Options>row_format
+DYNAMIC</Options>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="310" parent="277" name="units">
+      <Comment>单位表</Comment>
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <Options>row_format
+DYNAMIC</Options>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="311" parent="277" name="users">
+      <Comment>用户账号表</Comment>
+      <DetailsLevel>3</DetailsLevel>
+      <Engine>InnoDB</Engine>
+      <Options>row_format
+DYNAMIC</Options>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <column id="312" parent="291" name="id">
+      <Comment>主键</Comment>
+      <DefaultExpression>(replace(uuid(),_utf8mb4&apos;-&apos;,_utf8mb4&apos;&apos;))</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="313" parent="291" name="property_id">
+      <Comment>所属房屋ID</Comment>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="314" parent="291" name="owner_type">
+      <Comment>所属类型：item/item_batch/container/property/reminder</Comment>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>varchar(30)|0s</StoredType>
+    </column>
+    <column id="315" parent="291" name="owner_id">
+      <Comment>所属对象ID</Comment>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="316" parent="291" name="file_path">
+      <Comment>文件路径</Comment>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="317" parent="291" name="file_name">
+      <Comment>文件名</Comment>
+      <Position>6</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="318" parent="291" name="mime_type">
+      <Comment>MIME类型</Comment>
+      <Position>7</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="319" parent="291" name="file_size">
+      <Comment>文件大小</Comment>
+      <Position>8</Position>
+      <StoredType>bigint|0s</StoredType>
+    </column>
+    <column id="320" parent="291" name="uploaded_by">
+      <Comment>上传人用户ID</Comment>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="321" parent="291" name="created_at">
+      <Comment>创建时间</Comment>
+      <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>10</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <foreign-key id="322" parent="291" name="fk_attachments_property">
+      <ColNames>property_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>properties</RefTableName>
+    </foreign-key>
+    <foreign-key id="323" parent="291" name="fk_attachments_uploaded_by">
+      <ColNames>uploaded_by</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <index id="324" parent="291" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="325" parent="291" name="idx_attachments_property">
+      <ColNames>property_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="326" parent="291" name="idx_attachments_owner">
+      <ColNames>owner_type
+owner_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="327" parent="291" name="fk_attachments_uploaded_by">
+      <ColNames>uploaded_by</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="328" parent="291" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="329" parent="292" name="id">
+      <Comment>主键</Comment>
+      <DefaultExpression>(replace(uuid(),_utf8mb4&apos;-&apos;,_utf8mb4&apos;&apos;))</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="330" parent="292" name="property_id">
+      <Comment>房屋ID（可空）</Comment>
+      <Position>2</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="331" parent="292" name="user_id">
+      <Comment>用户ID（可空）</Comment>
+      <Position>3</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="332" parent="292" name="action">
+      <Comment>操作</Comment>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="333" parent="292" name="entity_type">
+      <Comment>实体类型</Comment>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <column id="334" parent="292" name="entity_id">
+      <Comment>实体ID</Comment>
+      <Position>6</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="335" parent="292" name="before_data">
+      <Comment>变更前数据JSON</Comment>
+      <Position>7</Position>
+      <StoredType>json|0s</StoredType>
+    </column>
+    <column id="336" parent="292" name="after_data">
+      <Comment>变更后数据JSON</Comment>
+      <Position>8</Position>
+      <StoredType>json|0s</StoredType>
+    </column>
+    <column id="337" parent="292" name="ip">
+      <Comment>IP地址</Comment>
+      <Position>9</Position>
+      <StoredType>varchar(45)|0s</StoredType>
+    </column>
+    <column id="338" parent="292" name="user_agent">
+      <Comment>用户代理</Comment>
+      <Position>10</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="339" parent="292" name="created_at">
+      <Comment>创建时间</Comment>
+      <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>11</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <foreign-key id="340" parent="292" name="fk_audit_property">
+      <ColNames>property_id</ColNames>
+      <OnDelete>set-null</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>properties</RefTableName>
+    </foreign-key>
+    <foreign-key id="341" parent="292" name="fk_audit_user">
+      <ColNames>user_id</ColNames>
+      <OnDelete>set-null</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <index id="342" parent="292" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="343" parent="292" name="idx_audit_logs_property_created">
+      <ColNames>property_id
+created_at</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="344" parent="292" name="idx_audit_logs_user_created">
+      <ColNames>user_id
+created_at</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="345" parent="292" name="idx_audit_logs_entity">
+      <ColNames>entity_type
+entity_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="346" parent="292" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="347" parent="293" name="id">
+      <Comment>主键</Comment>
+      <DefaultExpression>(replace(uuid(),_utf8mb4&apos;-&apos;,_utf8mb4&apos;&apos;))</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="348" parent="293" name="user_id">
+      <Comment>用户ID</Comment>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="349" parent="293" name="token_hash">
+      <Comment>令牌哈希</Comment>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="350" parent="293" name="type">
+      <Comment>类型：access/refresh/session/api_key</Comment>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>varchar(20)|0s</StoredType>
+    </column>
+    <column id="351" parent="293" name="expires_at">
+      <Comment>过期时间</Comment>
+      <Position>5</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="352" parent="293" name="revoked_at">
+      <Comment>撤销时间</Comment>
+      <Position>6</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="353" parent="293" name="device_info">
+      <Comment>设备信息JSON</Comment>
+      <Position>7</Position>
+      <StoredType>json|0s</StoredType>
+    </column>
+    <column id="354" parent="293" name="ip">
+      <Comment>IP地址</Comment>
+      <Position>8</Position>
+      <StoredType>varchar(45)|0s</StoredType>
+    </column>
+    <column id="355" parent="293" name="created_at">
+      <Comment>创建时间</Comment>
+      <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="356" parent="293" name="last_used_at">
+      <Comment>最后使用时间</Comment>
+      <Position>10</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <foreign-key id="357" parent="293" name="fk_auth_tokens_user">
+      <ColNames>user_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <index id="358" parent="293" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="359" parent="293" name="idx_auth_tokens_user">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="360" parent="293" name="idx_auth_tokens_expires">
+      <ColNames>expires_at</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="361" parent="293" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="362" parent="294" name="id">
+      <Comment>主键</Comment>
+      <DefaultExpression>(replace(uuid(),_utf8mb4&apos;-&apos;,_utf8mb4&apos;&apos;))</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="363" parent="294" name="property_id">
+      <Comment>来源房屋ID，仅用于追踪，审核通过后可为空</Comment>
+      <Position>2</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="364" parent="294" name="parent_id">
+      <Comment>父分类ID</Comment>
+      <Position>3</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="365" parent="294" name="name">
+      <Comment>分类名称</Comment>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="366" parent="294" name="icon">
+      <Comment>图标</Comment>
+      <Position>5</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="367" parent="294" name="default_unit_id">
+      <Comment>默认单位ID</Comment>
+      <Position>6</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="368" parent="294" name="default_low_stock_threshold">
+      <Comment>默认低库存阈值</Comment>
+      <Position>7</Position>
+      <StoredType>decimal(12,3 digit)|0s</StoredType>
+    </column>
+    <column id="369" parent="294" name="default_expiry_warning_days">
+      <Comment>默认过期提前提醒天数</Comment>
+      <Position>8</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="370" parent="294" name="sort_order">
+      <Comment>排序</Comment>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="371" parent="294" name="created_by">
+      <Comment>创建人用户ID，系统预置可为空</Comment>
+      <Position>10</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="372" parent="294" name="is_public">
+      <Comment>是否公共：0私有1公共</Comment>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>11</Position>
+      <StoredType>tinyint(1)|0s</StoredType>
+    </column>
+    <column id="373" parent="294" name="review_status">
+      <Comment>审核状态：pending/approved/rejected</Comment>
+      <DefaultExpression>&apos;pending&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>12</Position>
+      <StoredType>varchar(20)|0s</StoredType>
+    </column>
+    <column id="374" parent="294" name="reviewed_by">
+      <Comment>审核人用户ID</Comment>
+      <Position>13</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="375" parent="294" name="reviewed_at">
+      <Comment>审核时间</Comment>
+      <Position>14</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="376" parent="294" name="review_remark">
+      <Comment>审核备注</Comment>
+      <Position>15</Position>
+      <StoredType>varchar(500)|0s</StoredType>
+    </column>
+    <column id="377" parent="294" name="published_at">
+      <Comment>转为公共的时间</Comment>
+      <Position>16</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="378" parent="294" name="created_at">
+      <Comment>创建时间</Comment>
+      <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>17</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="379" parent="294" name="updated_at">
+      <Comment>更新时间</Comment>
+      <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <OnUpdate>CURRENT_TIMESTAMP(3)</OnUpdate>
+      <Position>18</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="380" parent="294" name="deleted_at">
+      <Comment>软删除时间</Comment>
+      <Position>19</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="381" parent="294" name="name_public_unique">
+      <ColumnKind>generated-stored</ColumnKind>
+      <Comment>公共命名唯一键，仅公共记录参与唯一约束</Comment>
+      <DefaultExpression>(case when ((`is_public` = 1) and (`deleted_at` is null)) then `name` else NULL end)</DefaultExpression>
+      <Position>20</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <foreign-key id="382" parent="294" name="fk_categories_property">
+      <ColNames>property_id</ColNames>
+      <OnDelete>set-null</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>properties</RefTableName>
+    </foreign-key>
+    <foreign-key id="383" parent="294" name="fk_categories_parent">
+      <ColNames>parent_id</ColNames>
+      <OnDelete>set-null</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>categories</RefTableName>
+    </foreign-key>
+    <foreign-key id="384" parent="294" name="fk_categories_unit">
+      <ColNames>default_unit_id</ColNames>
+      <OnDelete>set-null</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>units</RefTableName>
+    </foreign-key>
+    <foreign-key id="385" parent="294" name="fk_categories_created_by">
+      <ColNames>created_by</ColNames>
+      <OnDelete>set-null</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <foreign-key id="386" parent="294" name="fk_categories_reviewed_by">
+      <ColNames>reviewed_by</ColNames>
+      <OnDelete>set-null</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <index id="387" parent="294" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="388" parent="294" name="uk_categories_public_name">
+      <ColNames>name_public_unique</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="389" parent="294" name="idx_categories_property_parent">
+      <ColNames>property_id
+parent_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="390" parent="294" name="fk_categories_parent">
+      <ColNames>parent_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="391" parent="294" name="fk_categories_unit">
+      <ColNames>default_unit_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="392" parent="294" name="idx_categories_created_by">
+      <ColNames>created_by</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="393" parent="294" name="idx_categories_public">
+      <ColNames>is_public
+deleted_at</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="394" parent="294" name="idx_categories_review">
+      <ColNames>review_status
+is_public</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="395" parent="294" name="fk_categories_reviewed_by">
+      <ColNames>reviewed_by</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="396" parent="294" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="397" parent="294" name="uk_categories_public_name">
+      <UnderlyingIndexName>uk_categories_public_name</UnderlyingIndexName>
+    </key>
+    <column id="398" parent="295" name="id">
+      <Comment>主键</Comment>
+      <DefaultExpression>(replace(uuid(),_utf8mb4&apos;-&apos;,_utf8mb4&apos;&apos;))</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="399" parent="295" name="property_id">
+      <Comment>所属房屋ID</Comment>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="400" parent="295" name="parent_id">
+      <Comment>父容器ID</Comment>
+      <Position>3</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="401" parent="295" name="name">
+      <Comment>容器名称</Comment>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="402" parent="295" name="type">
+      <Comment>容器类型：room/cabinet/drawer/shelf/grid/box/fridge/freezer/appliance/other</Comment>
+      <DefaultExpression>&apos;other&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <column id="403" parent="295" name="qr_code">
+      <Comment>二维码</Comment>
+      <Position>6</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="404" parent="295" name="icon">
+      <Comment>图标</Comment>
+      <Position>7</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="405" parent="295" name="color">
+      <Comment>颜色</Comment>
+      <Position>8</Position>
+      <StoredType>varchar(20)|0s</StoredType>
+    </column>
+    <column id="406" parent="295" name="sort_order">
+      <Comment>排序</Comment>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="407" parent="295" name="attributes">
+      <Comment>扩展属性JSON</Comment>
+      <Position>10</Position>
+      <StoredType>json|0s</StoredType>
+    </column>
+    <column id="408" parent="295" name="is_active">
+      <Comment>是否启用：0否1是</Comment>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>11</Position>
+      <StoredType>tinyint(1)|0s</StoredType>
+    </column>
+    <column id="409" parent="295" name="created_by">
+      <Comment>创建人用户ID</Comment>
+      <NotNull>1</NotNull>
+      <Position>12</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="410" parent="295" name="updated_by">
+      <Comment>更新人用户ID</Comment>
+      <Position>13</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="411" parent="295" name="created_at">
+      <Comment>创建时间</Comment>
+      <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>14</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="412" parent="295" name="updated_at">
+      <Comment>更新时间</Comment>
+      <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <OnUpdate>CURRENT_TIMESTAMP(3)</OnUpdate>
+      <Position>15</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="413" parent="295" name="deleted_at">
+      <Comment>软删除时间</Comment>
+      <Position>16</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <foreign-key id="414" parent="295" name="fk_containers_property">
+      <ColNames>property_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>properties</RefTableName>
+    </foreign-key>
+    <foreign-key id="415" parent="295" name="fk_containers_parent">
+      <ColNames>parent_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>containers</RefTableName>
+    </foreign-key>
+    <foreign-key id="416" parent="295" name="fk_containers_created_by">
+      <ColNames>created_by</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <foreign-key id="417" parent="295" name="fk_containers_updated_by">
+      <ColNames>updated_by</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <index id="418" parent="295" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="419" parent="295" name="idx_containers_property_parent">
+      <ColNames>property_id
+parent_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="420" parent="295" name="idx_containers_property_type">
+      <ColNames>property_id
+type</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="421" parent="295" name="fk_containers_parent">
+      <ColNames>parent_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="422" parent="295" name="idx_containers_qr_code">
+      <ColNames>qr_code</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="423" parent="295" name="fk_containers_created_by">
+      <ColNames>created_by</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="424" parent="295" name="fk_containers_updated_by">
+      <ColNames>updated_by</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="425" parent="295" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="426" parent="296" name="id">
+      <Comment>主键</Comment>
+      <DefaultExpression>(replace(uuid(),_utf8mb4&apos;-&apos;,_utf8mb4&apos;&apos;))</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="427" parent="296" name="property_id">
+      <Comment>所属房屋ID</Comment>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="428" parent="296" name="item_id">
+      <Comment>物品ID</Comment>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="429" parent="296" name="batch_id">
+      <Comment>批次ID</Comment>
+      <Position>4</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="430" parent="296" name="container_id">
+      <Comment>容器ID</Comment>
+      <Position>5</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="431" parent="296" name="type">
+      <Comment>类型：in/out/consume/move/adjust/discard/return</Comment>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StoredType>varchar(20)|0s</StoredType>
+    </column>
+    <column id="432" parent="296" name="quantity_delta">
+      <Comment>数量变化</Comment>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StoredType>decimal(12,3 digit)|0s</StoredType>
+    </column>
+    <column id="433" parent="296" name="quantity_after">
+      <Comment>变化后数量</Comment>
+      <Position>8</Position>
+      <StoredType>decimal(12,3 digit)|0s</StoredType>
+    </column>
+    <column id="434" parent="296" name="unit_id">
+      <Comment>单位ID</Comment>
+      <Position>9</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="435" parent="296" name="reason">
+      <Comment>原因</Comment>
+      <Position>10</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="436" parent="296" name="created_by">
+      <Comment>创建人用户ID</Comment>
+      <NotNull>1</NotNull>
+      <Position>11</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="437" parent="296" name="created_at">
+      <Comment>创建时间</Comment>
+      <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>12</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <foreign-key id="438" parent="296" name="fk_transactions_property">
+      <ColNames>property_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>properties</RefTableName>
+    </foreign-key>
+    <foreign-key id="439" parent="296" name="fk_transactions_item">
+      <ColNames>item_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>items</RefTableName>
+    </foreign-key>
+    <foreign-key id="440" parent="296" name="fk_transactions_batch">
+      <ColNames>batch_id</ColNames>
+      <OnDelete>set-null</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>item_batches</RefTableName>
+    </foreign-key>
+    <foreign-key id="441" parent="296" name="fk_transactions_container">
+      <ColNames>container_id</ColNames>
+      <OnDelete>set-null</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>containers</RefTableName>
+    </foreign-key>
+    <foreign-key id="442" parent="296" name="fk_transactions_unit">
+      <ColNames>unit_id</ColNames>
+      <OnDelete>set-null</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>units</RefTableName>
+    </foreign-key>
+    <foreign-key id="443" parent="296" name="fk_transactions_created_by">
+      <ColNames>created_by</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <index id="444" parent="296" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="445" parent="296" name="idx_transactions_property_item">
+      <ColNames>property_id
+item_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="446" parent="296" name="idx_transactions_property_batch">
+      <ColNames>property_id
+batch_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="447" parent="296" name="fk_transactions_item">
+      <ColNames>item_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="448" parent="296" name="fk_transactions_batch">
+      <ColNames>batch_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="449" parent="296" name="fk_transactions_container">
+      <ColNames>container_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="450" parent="296" name="fk_transactions_unit">
+      <ColNames>unit_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="451" parent="296" name="fk_transactions_created_by">
+      <ColNames>created_by</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="452" parent="296" name="idx_transactions_created_at">
+      <ColNames>created_at</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="453" parent="296" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="454" parent="297" name="id">
+      <Comment>主键</Comment>
+      <DefaultExpression>(replace(uuid(),_utf8mb4&apos;-&apos;,_utf8mb4&apos;&apos;))</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="455" parent="297" name="property_id">
+      <Comment>所属房屋ID</Comment>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="456" parent="297" name="item_id">
+      <Comment>物品ID</Comment>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="457" parent="297" name="container_id">
+      <Comment>容器ID</Comment>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="458" parent="297" name="quantity">
+      <Comment>当前数量</Comment>
+      <DefaultExpression>0.000</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>decimal(12,3 digit)|0s</StoredType>
+    </column>
+    <column id="459" parent="297" name="unit_id">
+      <Comment>单位ID</Comment>
+      <Position>6</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="460" parent="297" name="production_date">
+      <Comment>生产日期</Comment>
+      <Position>7</Position>
+      <StoredType>date|0s</StoredType>
+    </column>
+    <column id="461" parent="297" name="expiry_date">
+      <Comment>过期日期</Comment>
+      <Position>8</Position>
+      <StoredType>date|0s</StoredType>
+    </column>
+    <column id="462" parent="297" name="opened_at">
+      <Comment>开封时间</Comment>
+      <Position>9</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="463" parent="297" name="opened_expiry_date">
+      <Comment>开封后过期日期</Comment>
+      <Position>10</Position>
+      <StoredType>date|0s</StoredType>
+    </column>
+    <column id="464" parent="297" name="status">
+      <Comment>状态：active/consumed/expired/discarded/moved</Comment>
+      <DefaultExpression>&apos;active&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>11</Position>
+      <StoredType>varchar(20)|0s</StoredType>
+    </column>
+    <column id="465" parent="297" name="note">
+      <Comment>备注</Comment>
+      <Position>12</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="466" parent="297" name="created_by">
+      <Comment>创建人用户ID</Comment>
+      <NotNull>1</NotNull>
+      <Position>13</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="467" parent="297" name="updated_by">
+      <Comment>更新人用户ID</Comment>
+      <Position>14</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="468" parent="297" name="created_at">
+      <Comment>创建时间</Comment>
+      <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>15</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="469" parent="297" name="updated_at">
+      <Comment>更新时间</Comment>
+      <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <OnUpdate>CURRENT_TIMESTAMP(3)</OnUpdate>
+      <Position>16</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <foreign-key id="470" parent="297" name="fk_batches_property">
+      <ColNames>property_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>properties</RefTableName>
+    </foreign-key>
+    <foreign-key id="471" parent="297" name="fk_batches_item">
+      <ColNames>item_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>items</RefTableName>
+    </foreign-key>
+    <foreign-key id="472" parent="297" name="fk_batches_container">
+      <ColNames>container_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>containers</RefTableName>
+    </foreign-key>
+    <foreign-key id="473" parent="297" name="fk_batches_unit">
+      <ColNames>unit_id</ColNames>
+      <OnDelete>set-null</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>units</RefTableName>
+    </foreign-key>
+    <foreign-key id="474" parent="297" name="fk_batches_created_by">
+      <ColNames>created_by</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <foreign-key id="475" parent="297" name="fk_batches_updated_by">
+      <ColNames>updated_by</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <index id="476" parent="297" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="477" parent="297" name="idx_batches_property_item">
+      <ColNames>property_id
+item_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="478" parent="297" name="idx_batches_property_container">
+      <ColNames>property_id
+container_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="479" parent="297" name="idx_batches_status">
+      <ColNames>property_id
+status</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="480" parent="297" name="fk_batches_item">
+      <ColNames>item_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="481" parent="297" name="fk_batches_container">
+      <ColNames>container_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="482" parent="297" name="fk_batches_unit">
+      <ColNames>unit_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="483" parent="297" name="idx_batches_expiry">
+      <ColNames>expiry_date</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="484" parent="297" name="idx_batches_opened_expiry">
+      <ColNames>opened_expiry_date</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="485" parent="297" name="fk_batches_created_by">
+      <ColNames>created_by</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="486" parent="297" name="fk_batches_updated_by">
+      <ColNames>updated_by</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="487" parent="297" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="488" parent="298" name="item_id">
+      <Comment>物品ID</Comment>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="489" parent="298" name="tag_id">
+      <Comment>标签ID</Comment>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="490" parent="298" name="created_at">
+      <Comment>创建时间</Comment>
+      <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <foreign-key id="491" parent="298" name="fk_item_tags_item">
+      <ColNames>item_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>items</RefTableName>
+    </foreign-key>
+    <foreign-key id="492" parent="298" name="fk_item_tags_tag">
+      <ColNames>tag_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>tags</RefTableName>
+    </foreign-key>
+    <index id="493" parent="298" name="PRIMARY">
+      <ColNames>item_id
+tag_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="494" parent="298" name="idx_item_tags_tag">
+      <ColNames>tag_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="495" parent="298" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="496" parent="299" name="id">
+      <Comment>主键</Comment>
+      <DefaultExpression>(replace(uuid(),_utf8mb4&apos;-&apos;,_utf8mb4&apos;&apos;))</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="497" parent="299" name="property_id">
+      <Comment>所属房屋ID</Comment>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="498" parent="299" name="name">
+      <Comment>物品名称</Comment>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>varchar(200)|0s</StoredType>
+    </column>
+    <column id="499" parent="299" name="category_id">
+      <Comment>分类ID</Comment>
+      <Position>4</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="500" parent="299" name="brand">
+      <Comment>品牌</Comment>
+      <Position>5</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="501" parent="299" name="model">
+      <Comment>型号/规格</Comment>
+      <Position>6</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="502" parent="299" name="barcode">
+      <Comment>条码</Comment>
+      <Position>7</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="503" parent="299" name="unit_id">
+      <Comment>单位ID</Comment>
+      <Position>8</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="504" parent="299" name="default_container_id">
+      <Comment>默认容器ID</Comment>
+      <Position>9</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="505" parent="299" name="image_url">
+      <Comment>图片URL</Comment>
+      <Position>10</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="506" parent="299" name="notes">
+      <Comment>备注</Comment>
+      <Position>11</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="507" parent="299" name="track_inventory">
+      <Comment>是否管理库存：0否1是</Comment>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>12</Position>
+      <StoredType>tinyint(1)|0s</StoredType>
+    </column>
+    <column id="508" parent="299" name="track_expiry">
+      <Comment>是否管理过期：0否1是</Comment>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>13</Position>
+      <StoredType>tinyint(1)|0s</StoredType>
+    </column>
+    <column id="509" parent="299" name="is_consumable">
+      <Comment>是否消耗品：0否1是</Comment>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>14</Position>
+      <StoredType>tinyint(1)|0s</StoredType>
+    </column>
+    <column id="510" parent="299" name="low_stock_threshold">
+      <Comment>低库存阈值</Comment>
+      <Position>15</Position>
+      <StoredType>decimal(12,3 digit)|0s</StoredType>
+    </column>
+    <column id="511" parent="299" name="expiry_warning_days">
+      <Comment>过期提前提醒天数</Comment>
+      <Position>16</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="512" parent="299" name="opened_expiry_days">
+      <Comment>开封后可用天数</Comment>
+      <Position>17</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="513" parent="299" name="default_shelf_life_days">
+      <Comment>默认保质期天数</Comment>
+      <Position>18</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="514" parent="299" name="attributes">
+      <Comment>扩展属性JSON</Comment>
+      <Position>19</Position>
+      <StoredType>json|0s</StoredType>
+    </column>
+    <column id="515" parent="299" name="current_quantity">
+      <Comment>当前总库存（冗余字段）</Comment>
+      <DefaultExpression>0.000</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>20</Position>
+      <StoredType>decimal(12,3 digit)|0s</StoredType>
+    </column>
+    <column id="516" parent="299" name="created_by">
+      <Comment>创建人用户ID</Comment>
+      <NotNull>1</NotNull>
+      <Position>21</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="517" parent="299" name="updated_by">
+      <Comment>更新人用户ID</Comment>
+      <Position>22</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="518" parent="299" name="created_at">
+      <Comment>创建时间</Comment>
+      <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>23</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="519" parent="299" name="updated_at">
+      <Comment>更新时间</Comment>
+      <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <OnUpdate>CURRENT_TIMESTAMP(3)</OnUpdate>
+      <Position>24</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="520" parent="299" name="deleted_at">
+      <Comment>软删除时间</Comment>
+      <Position>25</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <foreign-key id="521" parent="299" name="fk_items_property">
+      <ColNames>property_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>properties</RefTableName>
+    </foreign-key>
+    <foreign-key id="522" parent="299" name="fk_items_category">
+      <ColNames>category_id</ColNames>
+      <OnDelete>set-null</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>categories</RefTableName>
+    </foreign-key>
+    <foreign-key id="523" parent="299" name="fk_items_unit">
+      <ColNames>unit_id</ColNames>
+      <OnDelete>set-null</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>units</RefTableName>
+    </foreign-key>
+    <foreign-key id="524" parent="299" name="fk_items_default_container">
+      <ColNames>default_container_id</ColNames>
+      <OnDelete>set-null</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>containers</RefTableName>
+    </foreign-key>
+    <foreign-key id="525" parent="299" name="fk_items_created_by">
+      <ColNames>created_by</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <foreign-key id="526" parent="299" name="fk_items_updated_by">
+      <ColNames>updated_by</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <index id="527" parent="299" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="528" parent="299" name="idx_items_property_name">
+      <ColNames>property_id
+name</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="529" parent="299" name="idx_items_property_category">
+      <ColNames>property_id
+category_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="530" parent="299" name="idx_items_barcode">
+      <ColNames>property_id
+barcode</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="531" parent="299" name="idx_items_property">
+      <ColNames>property_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="532" parent="299" name="fk_items_category">
+      <ColNames>category_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="533" parent="299" name="fk_items_unit">
+      <ColNames>unit_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="534" parent="299" name="fk_items_default_container">
+      <ColNames>default_container_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="535" parent="299" name="fk_items_created_by">
+      <ColNames>created_by</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="536" parent="299" name="fk_items_updated_by">
+      <ColNames>updated_by</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="537" parent="299" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="538" parent="300" name="id">
+      <Comment>主键</Comment>
+      <DefaultExpression>(replace(uuid(),_utf8mb4&apos;-&apos;,_utf8mb4&apos;&apos;))</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="539" parent="300" name="user_id">
+      <Comment>用户ID</Comment>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="540" parent="300" name="property_id">
+      <Comment>房屋ID（可空）</Comment>
+      <Position>3</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="541" parent="300" name="type">
+      <Comment>类型：email/push/bark/telegram/webhook</Comment>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>varchar(30)|0s</StoredType>
+    </column>
+    <column id="542" parent="300" name="config">
+      <Comment>配置JSON</Comment>
+      <Position>5</Position>
+      <StoredType>json|0s</StoredType>
+    </column>
+    <column id="543" parent="300" name="is_enabled">
+      <Comment>是否启用：0否1是</Comment>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StoredType>tinyint(1)|0s</StoredType>
+    </column>
+    <column id="544" parent="300" name="verified_at">
+      <Comment>验证时间</Comment>
+      <Position>7</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="545" parent="300" name="created_at">
+      <Comment>创建时间</Comment>
+      <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="546" parent="300" name="updated_at">
+      <Comment>更新时间</Comment>
+      <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <OnUpdate>CURRENT_TIMESTAMP(3)</OnUpdate>
+      <Position>9</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <foreign-key id="547" parent="300" name="fk_nc_user">
+      <ColNames>user_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <foreign-key id="548" parent="300" name="fk_nc_property">
+      <ColNames>property_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>properties</RefTableName>
+    </foreign-key>
+    <index id="549" parent="300" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="550" parent="300" name="idx_nc_user">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="551" parent="300" name="idx_nc_property">
+      <ColNames>property_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="552" parent="300" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="553" parent="301" name="id">
+      <Comment>主键</Comment>
+      <DefaultExpression>(replace(uuid(),_utf8mb4&apos;-&apos;,_utf8mb4&apos;&apos;))</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="554" parent="301" name="user_id">
+      <Comment>用户ID</Comment>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="555" parent="301" name="property_id">
+      <Comment>房屋ID（可空）</Comment>
+      <Position>3</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="556" parent="301" name="event_type">
+      <Comment>事件类型</Comment>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <column id="557" parent="301" name="channel_id">
+      <Comment>渠道ID</Comment>
+      <Position>5</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="558" parent="301" name="enabled">
+      <Comment>是否启用：0否1是</Comment>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StoredType>tinyint(1)|0s</StoredType>
+    </column>
+    <column id="559" parent="301" name="advance_days">
+      <Comment>提前天数</Comment>
+      <Position>7</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="560" parent="301" name="quiet_hours">
+      <Comment>免打扰时段JSON</Comment>
+      <Position>8</Position>
+      <StoredType>json|0s</StoredType>
+    </column>
+    <column id="561" parent="301" name="created_at">
+      <Comment>创建时间</Comment>
+      <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="562" parent="301" name="updated_at">
+      <Comment>更新时间</Comment>
+      <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <OnUpdate>CURRENT_TIMESTAMP(3)</OnUpdate>
+      <Position>10</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <foreign-key id="563" parent="301" name="fk_np_user">
+      <ColNames>user_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <foreign-key id="564" parent="301" name="fk_np_property">
+      <ColNames>property_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>properties</RefTableName>
+    </foreign-key>
+    <foreign-key id="565" parent="301" name="fk_np_channel">
+      <ColNames>channel_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>notification_channels</RefTableName>
+    </foreign-key>
+    <index id="566" parent="301" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="567" parent="301" name="idx_np_user">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="568" parent="301" name="idx_np_property">
+      <ColNames>property_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="569" parent="301" name="fk_np_channel">
+      <ColNames>channel_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="570" parent="301" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="571" parent="302" name="id">
+      <Comment>主键</Comment>
+      <DefaultExpression>(replace(uuid(),_utf8mb4&apos;-&apos;,_utf8mb4&apos;&apos;))</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="572" parent="302" name="property_id">
+      <Comment>房屋ID（可空）</Comment>
+      <Position>2</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="573" parent="302" name="user_id">
+      <Comment>用户ID</Comment>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="574" parent="302" name="reminder_id">
+      <Comment>提醒ID</Comment>
+      <Position>4</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="575" parent="302" name="channel_id">
+      <Comment>渠道ID</Comment>
+      <Position>5</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="576" parent="302" name="title">
+      <Comment>标题</Comment>
+      <Position>6</Position>
+      <StoredType>varchar(200)|0s</StoredType>
+    </column>
+    <column id="577" parent="302" name="body">
+      <Comment>内容</Comment>
+      <Position>7</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="578" parent="302" name="payload">
+      <Comment>负载JSON</Comment>
+      <Position>8</Position>
+      <StoredType>json|0s</StoredType>
+    </column>
+    <column id="579" parent="302" name="status">
+      <Comment>状态：pending/sent/failed/read</Comment>
+      <DefaultExpression>&apos;pending&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+      <StoredType>varchar(20)|0s</StoredType>
+    </column>
+    <column id="580" parent="302" name="sent_at">
+      <Comment>发送时间</Comment>
+      <Position>10</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="581" parent="302" name="read_at">
+      <Comment>阅读时间</Comment>
+      <Position>11</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="582" parent="302" name="error_message">
+      <Comment>错误信息</Comment>
+      <Position>12</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="583" parent="302" name="created_at">
+      <Comment>创建时间</Comment>
+      <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>13</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <foreign-key id="584" parent="302" name="fk_notifications_property">
+      <ColNames>property_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>properties</RefTableName>
+    </foreign-key>
+    <foreign-key id="585" parent="302" name="fk_notifications_user">
+      <ColNames>user_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <foreign-key id="586" parent="302" name="fk_notifications_reminder">
+      <ColNames>reminder_id</ColNames>
+      <OnDelete>set-null</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>reminders</RefTableName>
+    </foreign-key>
+    <foreign-key id="587" parent="302" name="fk_notifications_channel">
+      <ColNames>channel_id</ColNames>
+      <OnDelete>set-null</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>notification_channels</RefTableName>
+    </foreign-key>
+    <index id="588" parent="302" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="589" parent="302" name="idx_notifications_property">
+      <ColNames>property_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="590" parent="302" name="idx_notifications_user_status">
+      <ColNames>user_id
+status</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="591" parent="302" name="fk_notifications_reminder">
+      <ColNames>reminder_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="592" parent="302" name="fk_notifications_channel">
+      <ColNames>channel_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="593" parent="302" name="idx_notifications_created_at">
+      <ColNames>created_at</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="594" parent="302" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="595" parent="303" name="id">
+      <Comment>主键</Comment>
+      <DefaultExpression>(replace(uuid(),_utf8mb4&apos;-&apos;,_utf8mb4&apos;&apos;))</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="596" parent="303" name="name">
+      <Comment>房屋名称</Comment>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="597" parent="303" name="address">
+      <Comment>地址</Comment>
+      <Position>3</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="598" parent="303" name="type">
+      <Comment>房屋类型</Comment>
+      <Position>4</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <column id="599" parent="303" name="sort_order">
+      <Comment>排序</Comment>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="600" parent="303" name="notes">
+      <Comment>备注</Comment>
+      <Position>6</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="601" parent="303" name="created_by">
+      <Comment>创建人用户ID</Comment>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="602" parent="303" name="created_at">
+      <Comment>创建时间</Comment>
+      <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="603" parent="303" name="updated_at">
+      <Comment>更新时间</Comment>
+      <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <OnUpdate>CURRENT_TIMESTAMP(3)</OnUpdate>
+      <Position>9</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="604" parent="303" name="deleted_at">
+      <Comment>软删除时间</Comment>
+      <Position>10</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <foreign-key id="605" parent="303" name="fk_properties_created_by">
+      <ColNames>created_by</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <index id="606" parent="303" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="607" parent="303" name="idx_properties_created_by">
+      <ColNames>created_by</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="608" parent="303" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="609" parent="304" name="id">
+      <Comment>主键</Comment>
+      <DefaultExpression>(replace(uuid(),_utf8mb4&apos;-&apos;,_utf8mb4&apos;&apos;))</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="610" parent="304" name="property_id">
+      <Comment>房屋ID</Comment>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="611" parent="304" name="inviter_user_id">
+      <Comment>邀请人用户ID</Comment>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="612" parent="304" name="invitee_email">
+      <Comment>被邀请人邮箱</Comment>
+      <Position>4</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="613" parent="304" name="invitee_phone">
+      <Comment>被邀请人手机号</Comment>
+      <Position>5</Position>
+      <StoredType>varchar(32)|0s</StoredType>
+    </column>
+    <column id="614" parent="304" name="token">
+      <Comment>邀请令牌</Comment>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="615" parent="304" name="role">
+      <Comment>邀请角色：admin/member/guest</Comment>
+      <DefaultExpression>&apos;member&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StoredType>varchar(20)|0s</StoredType>
+    </column>
+    <column id="616" parent="304" name="status">
+      <Comment>状态：pending/accepted/expired/cancelled</Comment>
+      <DefaultExpression>&apos;pending&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StoredType>varchar(20)|0s</StoredType>
+    </column>
+    <column id="617" parent="304" name="expires_at">
+      <Comment>过期时间</Comment>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="618" parent="304" name="accepted_by">
+      <Comment>接受人用户ID</Comment>
+      <Position>10</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="619" parent="304" name="accepted_at">
+      <Comment>接受时间</Comment>
+      <Position>11</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="620" parent="304" name="created_at">
+      <Comment>创建时间</Comment>
+      <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>12</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <foreign-key id="621" parent="304" name="fk_pi_property">
+      <ColNames>property_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>properties</RefTableName>
+    </foreign-key>
+    <foreign-key id="622" parent="304" name="fk_pi_inviter">
+      <ColNames>inviter_user_id</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <foreign-key id="623" parent="304" name="fk_pi_accepted_by">
+      <ColNames>accepted_by</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <index id="624" parent="304" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="625" parent="304" name="uk_property_invitations_token">
+      <ColNames>token</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="626" parent="304" name="idx_pi_property">
+      <ColNames>property_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="627" parent="304" name="fk_pi_inviter">
+      <ColNames>inviter_user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="628" parent="304" name="idx_pi_status">
+      <ColNames>status
+expires_at</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="629" parent="304" name="fk_pi_accepted_by">
+      <ColNames>accepted_by</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="630" parent="304" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="631" parent="304" name="uk_property_invitations_token">
+      <UnderlyingIndexName>uk_property_invitations_token</UnderlyingIndexName>
+    </key>
+    <column id="632" parent="305" name="id">
+      <Comment>主键</Comment>
+      <DefaultExpression>(replace(uuid(),_utf8mb4&apos;-&apos;,_utf8mb4&apos;&apos;))</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="633" parent="305" name="property_id">
+      <Comment>房屋ID</Comment>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="634" parent="305" name="user_id">
+      <Comment>用户ID</Comment>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="635" parent="305" name="role">
+      <Comment>角色：admin/member/guest</Comment>
+      <DefaultExpression>&apos;member&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>varchar(20)|0s</StoredType>
+    </column>
+    <column id="636" parent="305" name="status">
+      <Comment>状态：active/invited/removed</Comment>
+      <DefaultExpression>&apos;active&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>varchar(20)|0s</StoredType>
+    </column>
+    <column id="637" parent="305" name="joined_at">
+      <Comment>加入时间</Comment>
+      <Position>6</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="638" parent="305" name="invited_by">
+      <Comment>邀请人用户ID</Comment>
+      <Position>7</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="639" parent="305" name="created_at">
+      <Comment>创建时间</Comment>
+      <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="640" parent="305" name="updated_at">
+      <Comment>更新时间</Comment>
+      <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <OnUpdate>CURRENT_TIMESTAMP(3)</OnUpdate>
+      <Position>9</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <foreign-key id="641" parent="305" name="fk_pm_property">
+      <ColNames>property_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>properties</RefTableName>
+    </foreign-key>
+    <foreign-key id="642" parent="305" name="fk_pm_user">
+      <ColNames>user_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <foreign-key id="643" parent="305" name="fk_pm_invited_by">
+      <ColNames>invited_by</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <index id="644" parent="305" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="645" parent="305" name="uk_property_members">
+      <ColNames>property_id
+user_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="646" parent="305" name="idx_property_members_role">
+      <ColNames>property_id
+role</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="647" parent="305" name="idx_property_members_user">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="648" parent="305" name="fk_pm_invited_by">
+      <ColNames>invited_by</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="649" parent="305" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="650" parent="305" name="uk_property_members">
+      <UnderlyingIndexName>uk_property_members</UnderlyingIndexName>
+    </key>
+    <column id="651" parent="306" name="id">
+      <Comment>主键</Comment>
+      <DefaultExpression>(replace(uuid(),_utf8mb4&apos;-&apos;,_utf8mb4&apos;&apos;))</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="652" parent="306" name="reminder_id">
+      <Comment>提醒ID</Comment>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="653" parent="306" name="user_id">
+      <Comment>用户ID</Comment>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="654" parent="306" name="status">
+      <Comment>状态：pending/read/done/snoozed/dismissed</Comment>
+      <DefaultExpression>&apos;pending&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>varchar(20)|0s</StoredType>
+    </column>
+    <column id="655" parent="306" name="read_at">
+      <Comment>阅读时间</Comment>
+      <Position>5</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="656" parent="306" name="done_at">
+      <Comment>完成时间</Comment>
+      <Position>6</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="657" parent="306" name="snoozed_until">
+      <Comment>稍后提醒时间</Comment>
+      <Position>7</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="658" parent="306" name="created_at">
+      <Comment>创建时间</Comment>
+      <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <foreign-key id="659" parent="306" name="fk_rr_reminder">
+      <ColNames>reminder_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>reminders</RefTableName>
+    </foreign-key>
+    <foreign-key id="660" parent="306" name="fk_rr_user">
+      <ColNames>user_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <index id="661" parent="306" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="662" parent="306" name="uk_reminder_recipients">
+      <ColNames>reminder_id
+user_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="663" parent="306" name="idx_reminder_recipients_user">
+      <ColNames>user_id
+status</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="664" parent="306" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="665" parent="306" name="uk_reminder_recipients">
+      <UnderlyingIndexName>uk_reminder_recipients</UnderlyingIndexName>
+    </key>
+    <column id="666" parent="307" name="id">
+      <Comment>主键</Comment>
+      <DefaultExpression>(replace(uuid(),_utf8mb4&apos;-&apos;,_utf8mb4&apos;&apos;))</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="667" parent="307" name="property_id">
+      <Comment>所属房屋ID</Comment>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="668" parent="307" name="type">
+      <Comment>类型：expiry/opened_expiry/low_stock/custom</Comment>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>varchar(30)|0s</StoredType>
+    </column>
+    <column id="669" parent="307" name="item_id">
+      <Comment>物品ID</Comment>
+      <Position>4</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="670" parent="307" name="batch_id">
+      <Comment>批次ID</Comment>
+      <Position>5</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="671" parent="307" name="container_id">
+      <Comment>容器ID</Comment>
+      <Position>6</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="672" parent="307" name="trigger_at">
+      <Comment>触发时间</Comment>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="673" parent="307" name="threshold">
+      <Comment>阈值</Comment>
+      <Position>8</Position>
+      <StoredType>decimal(12,3 digit)|0s</StoredType>
+    </column>
+    <column id="674" parent="307" name="status">
+      <Comment>状态：pending/done/snoozed/dismissed</Comment>
+      <DefaultExpression>&apos;pending&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+      <StoredType>varchar(20)|0s</StoredType>
+    </column>
+    <column id="675" parent="307" name="snooze_until">
+      <Comment>稍后提醒时间</Comment>
+      <Position>10</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="676" parent="307" name="last_notified_at">
+      <Comment>上次通知时间</Comment>
+      <Position>11</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="677" parent="307" name="message">
+      <Comment>提醒内容</Comment>
+      <Position>12</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="678" parent="307" name="dedupe_key">
+      <Comment>去重键</Comment>
+      <NotNull>1</NotNull>
+      <Position>13</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="679" parent="307" name="created_by">
+      <Comment>创建人用户ID</Comment>
+      <Position>14</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="680" parent="307" name="created_at">
+      <Comment>创建时间</Comment>
+      <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>15</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="681" parent="307" name="updated_at">
+      <Comment>更新时间</Comment>
+      <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <OnUpdate>CURRENT_TIMESTAMP(3)</OnUpdate>
+      <Position>16</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <foreign-key id="682" parent="307" name="fk_reminders_property">
+      <ColNames>property_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>properties</RefTableName>
+    </foreign-key>
+    <foreign-key id="683" parent="307" name="fk_reminders_item">
+      <ColNames>item_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>items</RefTableName>
+    </foreign-key>
+    <foreign-key id="684" parent="307" name="fk_reminders_batch">
+      <ColNames>batch_id</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>item_batches</RefTableName>
+    </foreign-key>
+    <foreign-key id="685" parent="307" name="fk_reminders_container">
+      <ColNames>container_id</ColNames>
+      <OnDelete>set-null</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>containers</RefTableName>
+    </foreign-key>
+    <foreign-key id="686" parent="307" name="fk_reminders_created_by">
+      <ColNames>created_by</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <index id="687" parent="307" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="688" parent="307" name="uk_reminders_dedupe">
+      <ColNames>property_id
+dedupe_key</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="689" parent="307" name="idx_reminders_property_status_trigger">
+      <ColNames>property_id
+status
+trigger_at</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="690" parent="307" name="idx_reminders_item">
+      <ColNames>item_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="691" parent="307" name="idx_reminders_batch">
+      <ColNames>batch_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="692" parent="307" name="fk_reminders_container">
+      <ColNames>container_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="693" parent="307" name="fk_reminders_created_by">
+      <ColNames>created_by</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="694" parent="307" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="695" parent="307" name="uk_reminders_dedupe">
+      <UnderlyingIndexName>uk_reminders_dedupe</UnderlyingIndexName>
+    </key>
+    <column id="696" parent="308" name="id">
+      <Comment>主键</Comment>
+      <DefaultExpression>(replace(uuid(),_utf8mb4&apos;-&apos;,_utf8mb4&apos;&apos;))</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="697" parent="308" name="scope">
+      <Comment>范围：system/user/property</Comment>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(20)|0s</StoredType>
+    </column>
+    <column id="698" parent="308" name="owner_id">
+      <Comment>所有者ID：system为全零UUID，user为users.id，property为properties.id</Comment>
+      <DefaultExpression>&apos;00000000000000000000000000000000&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="699" parent="308" name="key">
+      <Comment>配置键</Comment>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="700" parent="308" name="value">
+      <Comment>配置值JSON</Comment>
+      <Position>5</Position>
+      <StoredType>json|0s</StoredType>
+    </column>
+    <column id="701" parent="308" name="updated_by">
+      <Comment>更新人用户ID</Comment>
+      <Position>6</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="702" parent="308" name="updated_at">
+      <Comment>更新时间</Comment>
+      <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <OnUpdate>CURRENT_TIMESTAMP(3)</OnUpdate>
+      <Position>7</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <foreign-key id="703" parent="308" name="fk_settings_updated_by">
+      <ColNames>updated_by</ColNames>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <index id="704" parent="308" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="705" parent="308" name="uk_settings_scope_owner_key">
+      <ColNames>scope
+owner_id
+key</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="706" parent="308" name="fk_settings_updated_by">
+      <ColNames>updated_by</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="707" parent="308" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="708" parent="308" name="uk_settings_scope_owner_key">
+      <UnderlyingIndexName>uk_settings_scope_owner_key</UnderlyingIndexName>
+    </key>
+    <column id="709" parent="309" name="id">
+      <Comment>主键</Comment>
+      <DefaultExpression>(replace(uuid(),_utf8mb4&apos;-&apos;,_utf8mb4&apos;&apos;))</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="710" parent="309" name="property_id">
+      <Comment>来源房屋ID，仅用于追踪，审核通过后可为空</Comment>
+      <Position>2</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="711" parent="309" name="name">
+      <Comment>标签名称</Comment>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <column id="712" parent="309" name="color">
+      <Comment>颜色</Comment>
+      <Position>4</Position>
+      <StoredType>varchar(20)|0s</StoredType>
+    </column>
+    <column id="713" parent="309" name="created_by">
+      <Comment>创建人用户ID，系统预置可为空</Comment>
+      <Position>5</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="714" parent="309" name="is_public">
+      <Comment>是否公共：0私有1公共</Comment>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StoredType>tinyint(1)|0s</StoredType>
+    </column>
+    <column id="715" parent="309" name="review_status">
+      <Comment>审核状态：pending/approved/rejected</Comment>
+      <DefaultExpression>&apos;pending&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StoredType>varchar(20)|0s</StoredType>
+    </column>
+    <column id="716" parent="309" name="reviewed_by">
+      <Comment>审核人用户ID</Comment>
+      <Position>8</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="717" parent="309" name="reviewed_at">
+      <Comment>审核时间</Comment>
+      <Position>9</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="718" parent="309" name="review_remark">
+      <Comment>审核备注</Comment>
+      <Position>10</Position>
+      <StoredType>varchar(500)|0s</StoredType>
+    </column>
+    <column id="719" parent="309" name="published_at">
+      <Comment>转为公共的时间</Comment>
+      <Position>11</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="720" parent="309" name="created_at">
+      <Comment>创建时间</Comment>
+      <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>12</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="721" parent="309" name="updated_at">
+      <Comment>更新时间</Comment>
+      <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <OnUpdate>CURRENT_TIMESTAMP(3)</OnUpdate>
+      <Position>13</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="722" parent="309" name="deleted_at">
+      <Comment>软删除时间</Comment>
+      <Position>14</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="723" parent="309" name="name_public_unique">
+      <ColumnKind>generated-stored</ColumnKind>
+      <Comment>公共命名唯一键</Comment>
+      <DefaultExpression>(case when ((`is_public` = 1) and (`deleted_at` is null)) then `name` else NULL end)</DefaultExpression>
+      <Position>15</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <foreign-key id="724" parent="309" name="fk_tags_property">
+      <ColNames>property_id</ColNames>
+      <OnDelete>set-null</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>properties</RefTableName>
+    </foreign-key>
+    <foreign-key id="725" parent="309" name="fk_tags_created_by">
+      <ColNames>created_by</ColNames>
+      <OnDelete>set-null</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <foreign-key id="726" parent="309" name="fk_tags_reviewed_by">
+      <ColNames>reviewed_by</ColNames>
+      <OnDelete>set-null</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <index id="727" parent="309" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="728" parent="309" name="uk_tags_public_name">
+      <ColNames>name_public_unique</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="729" parent="309" name="fk_tags_property">
+      <ColNames>property_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="730" parent="309" name="idx_tags_created_by">
+      <ColNames>created_by</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="731" parent="309" name="idx_tags_public">
+      <ColNames>is_public
+deleted_at</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="732" parent="309" name="idx_tags_review">
+      <ColNames>review_status
+is_public</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="733" parent="309" name="fk_tags_reviewed_by">
+      <ColNames>reviewed_by</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="734" parent="309" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="735" parent="309" name="uk_tags_public_name">
+      <UnderlyingIndexName>uk_tags_public_name</UnderlyingIndexName>
+    </key>
+    <column id="736" parent="310" name="id">
+      <Comment>主键</Comment>
+      <DefaultExpression>(replace(uuid(),_utf8mb4&apos;-&apos;,_utf8mb4&apos;&apos;))</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="737" parent="310" name="property_id">
+      <Comment>来源房屋ID，仅用于追踪，审核通过后可为空</Comment>
+      <Position>2</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="738" parent="310" name="name">
+      <Comment>单位名称</Comment>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <column id="739" parent="310" name="symbol">
+      <Comment>单位符号</Comment>
+      <Position>4</Position>
+      <StoredType>varchar(20)|0s</StoredType>
+    </column>
+    <column id="740" parent="310" name="decimal_places">
+      <Comment>小数位数</Comment>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="741" parent="310" name="created_by">
+      <Comment>创建人用户ID，系统预置可为空</Comment>
+      <Position>6</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="742" parent="310" name="is_public">
+      <Comment>是否公共：0私有1公共</Comment>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StoredType>tinyint(1)|0s</StoredType>
+    </column>
+    <column id="743" parent="310" name="review_status">
+      <Comment>审核状态：pending/approved/rejected</Comment>
+      <DefaultExpression>&apos;pending&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StoredType>varchar(20)|0s</StoredType>
+    </column>
+    <column id="744" parent="310" name="reviewed_by">
+      <Comment>审核人用户ID</Comment>
+      <Position>9</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="745" parent="310" name="reviewed_at">
+      <Comment>审核时间</Comment>
+      <Position>10</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="746" parent="310" name="review_remark">
+      <Comment>审核备注</Comment>
+      <Position>11</Position>
+      <StoredType>varchar(500)|0s</StoredType>
+    </column>
+    <column id="747" parent="310" name="published_at">
+      <Comment>转为公共的时间</Comment>
+      <Position>12</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="748" parent="310" name="created_at">
+      <Comment>创建时间</Comment>
+      <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>13</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="749" parent="310" name="updated_at">
+      <Comment>更新时间</Comment>
+      <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <OnUpdate>CURRENT_TIMESTAMP(3)</OnUpdate>
+      <Position>14</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="750" parent="310" name="deleted_at">
+      <Comment>软删除时间</Comment>
+      <Position>15</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="751" parent="310" name="name_public_unique">
+      <ColumnKind>generated-stored</ColumnKind>
+      <Comment>公共命名唯一键</Comment>
+      <DefaultExpression>(case when ((`is_public` = 1) and (`deleted_at` is null)) then `name` else NULL end)</DefaultExpression>
+      <Position>16</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <foreign-key id="752" parent="310" name="fk_units_property">
+      <ColNames>property_id</ColNames>
+      <OnDelete>set-null</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>properties</RefTableName>
+    </foreign-key>
+    <foreign-key id="753" parent="310" name="fk_units_created_by">
+      <ColNames>created_by</ColNames>
+      <OnDelete>set-null</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <foreign-key id="754" parent="310" name="fk_units_reviewed_by">
+      <ColNames>reviewed_by</ColNames>
+      <OnDelete>set-null</OnDelete>
+      <RefColNames>id</RefColNames>
+      <RefTableName>users</RefTableName>
+    </foreign-key>
+    <index id="755" parent="310" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="756" parent="310" name="uk_units_public_name">
+      <ColNames>name_public_unique</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="757" parent="310" name="fk_units_property">
+      <ColNames>property_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="758" parent="310" name="idx_units_created_by">
+      <ColNames>created_by</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="759" parent="310" name="idx_units_public">
+      <ColNames>is_public
+deleted_at</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="760" parent="310" name="idx_units_review">
+      <ColNames>review_status
+is_public</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="761" parent="310" name="fk_units_reviewed_by">
+      <ColNames>reviewed_by</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="762" parent="310" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="763" parent="310" name="uk_units_public_name">
+      <UnderlyingIndexName>uk_units_public_name</UnderlyingIndexName>
+    </key>
+    <column id="764" parent="311" name="id">
+      <Comment>主键</Comment>
+      <DefaultExpression>(replace(uuid(),_utf8mb4&apos;-&apos;,_utf8mb4&apos;&apos;))</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>char(32)|0s</StoredType>
+    </column>
+    <column id="765" parent="311" name="username">
+      <Comment>用户名，唯一</Comment>
+      <Position>2</Position>
+      <StoredType>varchar(64)|0s</StoredType>
+    </column>
+    <column id="766" parent="311" name="email">
+      <Comment>邮箱，唯一</Comment>
+      <Position>3</Position>
+      <StoredType>varchar(255)|0s</StoredType>
+    </column>
+    <column id="767" parent="311" name="phone">
+      <Comment>手机号，唯一</Comment>
+      <Position>4</Position>
+      <StoredType>varchar(32)|0s</StoredType>
+    </column>
+    <column id="768" parent="311" name="password_hash">
+      <Comment>密码哈希</Comment>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="769" parent="311" name="display_name">
+      <Comment>显示名称</Comment>
+      <Position>6</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="770" parent="311" name="avatar_url">
+      <Comment>头像URL</Comment>
+      <Position>7</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="771" parent="311" name="status">
+      <Comment>状态：active/disabled/deleted</Comment>
+      <DefaultExpression>&apos;active&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StoredType>varchar(20)|0s</StoredType>
+    </column>
+    <column id="772" parent="311" name="created_at">
+      <Comment>创建时间</Comment>
+      <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="773" parent="311" name="updated_at">
+      <Comment>更新时间</Comment>
+      <DefaultExpression>CURRENT_TIMESTAMP(3)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <OnUpdate>CURRENT_TIMESTAMP(3)</OnUpdate>
+      <Position>10</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <column id="774" parent="311" name="deleted_at">
+      <Comment>软删除时间</Comment>
+      <Position>11</Position>
+      <StoredType>datetime(3)|0s</StoredType>
+    </column>
+    <index id="775" parent="311" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="776" parent="311" name="uk_users_username">
+      <ColNames>username</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="777" parent="311" name="uk_users_email">
+      <ColNames>email</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="778" parent="311" name="uk_users_phone">
+      <ColNames>phone</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="779" parent="311" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <key id="780" parent="311" name="uk_users_username">
+      <UnderlyingIndexName>uk_users_username</UnderlyingIndexName>
+    </key>
+    <key id="781" parent="311" name="uk_users_email">
+      <UnderlyingIndexName>uk_users_email</UnderlyingIndexName>
+    </key>
+    <key id="782" parent="311" name="uk_users_phone">
+      <UnderlyingIndexName>uk_users_phone</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>

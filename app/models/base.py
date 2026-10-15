@@ -25,8 +25,14 @@ DateTimeMS = DateTime().with_variant(MySQLDateTime(fsp=3), "mysql")
 
 
 def new_uuid() -> str:
-    """生成 32 位、无连字符、全大写 UUID。"""
-    return uuid.uuid4().hex.upper()
+    """生成 32 位、无连字符的小写 UUID。
+
+    与建表脚本 sql/item_manager_create.sql 中的
+    ``DEFAULT (REPLACE(uuid(), '-', ''))`` 保持一致：MySQL 的 uuid() 返回小写，
+    因此 Python 侧也生成小写，避免同一列混入两种大小写形式。
+    （列排序规则为 utf8mb4_unicode_ci，比较本身不区分大小写。）
+    """
+    return uuid.uuid4().hex
 
 
 class Base(DeclarativeBase):
@@ -34,27 +40,39 @@ class Base(DeclarativeBase):
 
 
 class UUIDMixin:
+    # sort_order 为负值，保证 id 排在业务列之前，
+    # 与建表脚本中 `id` 紧跟表定义首行的顺序一致。
     id: Mapped[str] = mapped_column(
         CHAR(ID_LENGTH),
         primary_key=True,
         default=new_uuid,
-        server_default=text("(REPLACE(UPPER(uuid()),'-',''))"),
+        server_default=text("(REPLACE(uuid(),'-',''))"),
+        sort_order=-100,
         comment="主键",
     )
 
 
 class TimestampMixin:
+    # sort_order 为正值，保证 created_at/updated_at 排在业务列之后，
+    # 与建表脚本的列顺序一致。
     created_at: Mapped[datetime] = mapped_column(
         DateTimeMS,
         nullable=False,
         server_default=text("CURRENT_TIMESTAMP(3)"),
+        sort_order=100,
         comment="创建时间",
     )
     updated_at: Mapped[datetime] = mapped_column(
         DateTimeMS,
         nullable=False,
-        server_default=text("CURRENT_TIMESTAMP(3)"),
+        # 注意：SQLAlchemy 的 server_onupdate 不会写进 MySQL 的建表 DDL，
+        # 必须把 ON UPDATE 子句并入 server_default，才能生成
+        # `DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3)`，
+        # 与建表脚本一致（绕过 ORM 的直接 SQL 更新也会自动刷新该列）。
+        server_default=text("CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3)"),
+        # onupdate 作用于 ORM 发出的 UPDATE 语句。
         onupdate=text("CURRENT_TIMESTAMP(3)"),
+        sort_order=101,
         comment="更新时间",
     )
 
@@ -63,5 +81,6 @@ class SoftDeleteMixin:
     deleted_at: Mapped[datetime | None] = mapped_column(
         DateTimeMS,
         nullable=True,
+        sort_order=102,
         comment="软删除时间",
     )
